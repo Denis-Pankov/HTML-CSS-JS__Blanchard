@@ -64,7 +64,10 @@ h1, h2, h3, h4, p {
 }
 
 .container {
-  padding: 0px 160px;
+  max-width: 1630px;
+  /* padding: 0px 160px; */
+  padding: 0 15px;
+  margin: 0 auto;
 }
 
 @media (max-width:1560px) {
