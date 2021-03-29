@@ -1,9 +1,11 @@
 .hero-section {
   position: relative;
-  max-width: 1920px;
+  width: 100%; 
+  margin: 0 auto;
   margin-top: -170px;
   min-height: 800px;
   z-index: 1;
+  background-color: black;
 }
 
 @media (max-width:400px) {
@@ -25,7 +27,6 @@
 }
 
 .hero-container__heading {
-  content: '';
   position: relative;
   width: 580px;
   margin-bottom: 16px;
@@ -72,8 +73,7 @@
 .hero-container__item {
   position: relative;
   width: 570px;
-  /* margin-top: 427px; */
-  margin-bottom: 114px;
+  margin-bottom: 94px;
   color: #ffffff;
   font-weight: 700;
   font-size: 18px;
@@ -182,6 +182,10 @@
 }
 
 /* Swipper */
+.swiper-container {
+  min-height: 800px;
+}
+
 .hero__wrapper {
   position: absolute;
   top: 0;
@@ -192,6 +196,7 @@
 
 .hero__image {
   height: 100%;
+  width: 100%;
   background-repeat: no-repeat;
   background-position: center;
 }

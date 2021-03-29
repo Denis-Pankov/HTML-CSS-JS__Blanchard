@@ -65,11 +65,11 @@ $(document).ready(function() {
     //   });
 });
 
-new Swiper('.hero-section',{
+new Swiper('.swiper-container',{
     slidesPerView: 1,
 });
 
-var mySwiper = new Swiper('.hero-section', {
+var mySwiper = new Swiper('.swiper-container', {
     autoplay: {
       delay: 30000,
     },
