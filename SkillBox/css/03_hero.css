@@ -5,6 +5,7 @@
   margin-top: -170px;
   min-height: 800px;
   z-index: 1;
+  background-color: black;
 }
 
 @media (max-width:400px) {
@@ -16,7 +17,9 @@
 }
 
 .hero-container {
+  position: relative;
   padding-top: 242px;
+  z-index: 10;
 }
 
 @media (max-width:400px) {
@@ -26,14 +29,12 @@
 }
 
 .hero-container__heading {
-  position: relative;
   width: 580px;
   margin-bottom: 16px;
   color: #ffffff;
   font-weight: 700;
   font-size: 72px;
   line-height: 83px;
-  z-index: 2;
 }
 
 @media (max-width:640px) {
@@ -70,14 +71,12 @@
 }
 
 .hero-container__item {
-  position: relative;
   width: 570px;
   margin-bottom: 94px;
   color: #ffffff;
   font-weight: 700;
   font-size: 18px;
   line-height: 30px;
-  z-index: 2;
 }
 
 @media (max-width:768px) {
@@ -182,25 +181,17 @@
 
 /* Swipper */
 .swiper-container {
-  /* position: absolute; */
-  min-height: 800px;
-  /* top: 0; */
-  /* z-index: 1; */
-}
-
-.hero__wrapper {
   position: absolute;
   top: 0;
-  background-position: center;
-  background-size: cover;
-  z-index: 1;
+  left: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .hero__image {
   height: 100%;
-  /* width: 100%; */
-  background-repeat: no-repeat;
-  background-position: center;
+  width: 100%;
+  background-size: cover;
 }
 
 .swiper-slide-active {
@@ -224,55 +215,55 @@
 }
 
 .hero__image-first {
-  background-image: url(../img/1920First.jpg);
+  background-image: url(../img/hero/1920First.jpg);
 }
 
 .hero__image-second {
-  background-image: url(../img/1920Second.jpg);
+  background-image: url(../img/hero/1920Second.jpg);
 }
 
 .hero__image-third {
-  background-image: url(../img/1920Third.jpg);
+  background-image: url(../img/hero/1920Third.jpg);
 }
 
 @media (max-width:1024px) {
   .hero__image-first {
-    background-image: url(../img/1024First.jpg);
+    background-image: url(../img/hero/1024First.jpg);
   }
   
   .hero__image-second {
-    background-image: url(../img/1024Second.jpg);
+    background-image: url(../img/hero/1024Second.jpg);
   }
   
   .hero__image-third {
-    background-image: url(../img/1024Third.jpg);
+    background-image: url(../img/hero/1024Third.jpg);
   }
 }
 
 @media (max-width:768px) {
   .hero__image-first {
-    background-image: url(../img/768First.jpg);
+    background-image: url(../img/hero/768First.jpg);
   }
   
   .hero__image-second {
-    background-image: url(../img/768Second.jpg);
+    background-image: url(../img/hero/768Second.jpg);
   }
   
   .hero__image-third {
-    background-image: url(../img/768Third.jpg);
+    background-image: url(../img/hero/768Third.jpg);
   }
 }
 
 @media (max-width:320px) {
   .hero__image-first {
-    background-image: url(../img/320First.jpg);
+    background-image: url(../img/hero/320First.jpg);
   }
   
   .hero__image-second {
-    background-image: url(../img/320Second.jpg);
+    background-image: url(../img/hero/320Second.jpg);
   }
   
   .hero__image-third {
-    background-image: url(../img/320Third.jpg);
+    background-image: url(../img/hero/320Third.jpg);
   }
 }
