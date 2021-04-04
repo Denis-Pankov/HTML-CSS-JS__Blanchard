@@ -1,0 +1,9 @@
+.aboutUs {
+    margin: 80px auto;    
+}
+
+.aboutUs__item {
+    max-width: 1080px;
+    line-height: 32px;
+}
+

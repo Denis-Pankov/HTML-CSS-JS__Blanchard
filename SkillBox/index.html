@@ -18,9 +18,12 @@
 	<link rel="stylesheet" href="css/01_common.css">
 	<link rel="stylesheet" href="css/02_header.css">
 	<link rel="stylesheet" href="css/03_hero.css">
+	<link rel="stylesheet" href="css/04_aboutUs.css">
+	<link rel="stylesheet" href="css/05_galary.css">
 	<script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 	<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+	<script defer src="js/choices.min.js"></script>
 	<script defer src="js/index.js"></script>
 </head>
 
@@ -39,7 +42,7 @@
 								<a href="#about-us" class="header-top__link">О нас</a>
 							</li>
 							<li class="header-top__item">
-								<a href="#galary" class="header-top__link">Галерея</a>
+								<a href="#gallery" class="header-top__link">Галерея</a>
 							</li>
 							<li class="header-top__item">
 								<a href="#catalog" class="header-top__link">Каталог</a>
@@ -264,11 +267,11 @@
 		</div>
 	</section>
 
-	<section class="container about-us__container" id="about-us">
-		<h2 class="reset-title container__heading">
+	<section class="container aboutUs" id="about-us">
+		<h2 class="reset-title container-heading aboutUs__heading">
 			О нас
 		</h2>
-		<p class="reset-title about-us__item">
+		<p class="reset-title aboutUs__item">
 			Ясность нашей позиции очевидна: семантический разбор внешних противодействий однозначно определяет каждого
 			участника как способного принимать собственные решения касаемо распределения внутренних резервов и ресурсов.
 			Не следует, однако, забывать, что высококачественный прототип будущего проекта влечет за собой процесс
@@ -280,32 +283,186 @@
 		</p>
 	</section>
 
-	<section class="container gallery-container" id="galary">
-		<div class="galary-container__left">
-			<h2 class="reset-title container-heading galary-container__heading">Галерея</h2>
-			<div class="galary-container__filter-free">
-				<div class="galary-container__filter">
-					<h4 class="reset-title galary-container__filter-heading">Фильтровать по:</h4>
-					<p class="reset-title">
-						<select name="selectfilter" id="selectfilter">
+	<section class="gallery" id="gallery">
+		<div class="container gallery-content">
+			<div class="gallery-left">
+				<h2 class="reset-title container-heading gallery-left__heading">Галерея</h2>
+				<div class="gallery-left__author">
+					<div class="author__filter">
+						<h4 class="reset-title author__filter-heading">Фильтровать по:</h4>
+						<select class="author__filter-select" name="selectfilter" id="selectFilter">
 							<option value="Автор">Автор</option>
 							<option value="Направление">Направление</option>
 							<option value="Техника">Техника</option>
 						</select>
-					</p>
-				</div>
-				<div class="galary-container__free">
-					Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
-					<span>
-						<a href="">авторизуйтесь</a>
-					</span>
-					, либо воспользуйтесь лицензией.
+					</div>
+					<div class="author__free">
+						Вам предоставляется 10 бесплатных скачиваний. Для увеличения количества скачиваний
+						<span>
+							<a class="author__authorization" href="">авторизуйтесь</a>
+						</span>
+						, либо воспользуйтесь лицензией.
+					</div>
 				</div>
 			</div>
-		</div>
-		<div class="galary-container__right">
-			<div class="galary-container__right-swiper">
-				Slides
+			<div class="gallery-right">
+				<div class="gallery-right__swiper">	
+					<div class="swiper-button-prev"></div>
+					<div class="swiper-pagination"></div>
+					<div class="swiper-button-next"></div>				
+					<div class="gallery__wrapper swiper-wrapper">
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img class="galary__image-slide" src="img/Gallery/01.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/02.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/03.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/04.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/05.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/06.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/11.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/12.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/13.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/14.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/15.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/16.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/17.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/18.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/19.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/20.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/21.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/22.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/23.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/24.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/25.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/26.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/27.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/28.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/29.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/30.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/31.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/32.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/33.jpg" alt="">
+							</div>
+						</div>
+						<div class="gallery__slide swiper-slide">
+							<div class="gallery__image">
+								<img src="img/Gallery/34.jpg" alt="">
+							</div>
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</section>

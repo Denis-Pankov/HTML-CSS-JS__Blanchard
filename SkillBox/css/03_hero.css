@@ -180,7 +180,7 @@
 }
 
 /* Swipper */
-.swiper-container {
+.hero-section .swiper-container {
   position: absolute;
   top: 0;
   left: 0;
@@ -194,7 +194,7 @@
   background-size: cover;
 }
 
-.swiper-slide-active {
+.hero__wrapper .swiper-slide-active {
   animation: scale 30s infinite;
 }
 
