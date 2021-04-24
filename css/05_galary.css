@@ -245,11 +245,7 @@
     overflow: hidden;
 }
 
-
-
-@media (max-width:499px) {
-    
-
+@media (max-width:499px) { 
     .galary__image-slide {
         width: 100%;
     }
@@ -265,8 +261,7 @@
     
     .gallery__wrapper {
         width: auto;
-    }
-    
+    }    
 }
 
 .swiper-nav {

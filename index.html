@@ -13,7 +13,8 @@
 	<link rel="preload" href="fonts/opensans-bold.woff2" as="font" type="font/woff2" crossorigin>
 	<link rel="stylesheet" href="css/00__fonts.css">
 	<link rel="stylesheet" href="https://unpkg.com/simplebar@latest/dist/simplebar.css">
-	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
+	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">	
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
 	<!-- <link rel="stylesheet" href="https://components/a11y/a11y.min.css"> -->
 	<link rel="stylesheet" href="css/choices.min.css">
 	<link rel="stylesheet" href="css/01_common.css">
@@ -21,15 +22,18 @@
 	<link rel="stylesheet" href="css/03_hero.css">
 	<link rel="stylesheet" href="css/04_aboutUs.css">
 	<link rel="stylesheet" href="css/05_galary.css">
+	<link rel="stylesheet" href="css/06_catalog.css">
 	<script defer src="https://unpkg.com/simplebar@latest/dist/simplebar.min.js"></script>
 	<script defer src="https://code.jquery.com/jquery-3.6.0.slim.min.js"></script>
 	<script defer src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-	<script defer src="js/choices.min.js"></script>
+	<script defer src="js/choices.min.js"></script>	
+	<script defer src="https://code.jquery.com/jquery-1.12.4.js"></script>
+	<script defer src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
 	<script defer src="js/index.js"></script>
 </head>
 
 <body>
-	<header>
+	<header style="display: none;">
 		<div class="container-top">
 			<div class="container header-top">
 				<button class="header-burger">
@@ -239,7 +243,7 @@
 		</div>
 	</header>
 
-	<section class="hero-section">
+	<section class="hero-section" style="display: none;">
 		<div class="container hero-container">
 			<h3 class="reset-title hero-container__heading">
 				Прикоснитесь к&nbsp;прекрасному
@@ -272,7 +276,7 @@
 		</div>
 	</section>
 
-	<section class="container aboutUs" id="about-us">
+	<section class="container aboutUs" style="display: none;" id="about-us">
 		<h2 class="reset-title container-heading aboutUs__heading">
 			О нас
 		</h2>
@@ -288,7 +292,7 @@
 		</p>
 	</section>
 
-	<section class="gallery" id="gallery">
+	<section class="gallery" style="display: none;" id="gallery">
 		<div class="container gallery-content">
 			<div class="gallery-left">
 				<h2 class="reset-title container-heading gallery-left__heading">Галерея</h2>
@@ -1077,42 +1081,66 @@
 	</section>
 
 	<section class="container catalog-container" id="catalog">
-		<div class="catalog-container__heading-flag">
-			<h2 class="reset-title container-heading catalog-container__heading">Каталог</h2>
-			<ul class="catalog-container__flag__list">
-				<li class="catalog-container__flag__item">
-					<button type="button" class="catalog-container__flag" data-path="one"></button>
+		<div class="catalog__heading-flag">
+			<h2 class="reset-title container-heading catalog__heading">Каталог</h2>
+			<ul class="catalog-flag__list">
+				<li class="catalog-flag__item">
+					<button type="button" class="catalog-flag__btn flag-fra" data-path="fra"></button>
 				</li>
-				<li class="catalog-container__flag__item">
-					<button type="button" class="catalog-container__flag" data-path="two"></button>
+				<li class="catalog-flag__item">
+					<button type="button" class="catalog-flag__btn flag-deu" data-path="deu"></button>
 				</li>
-				<li class="catalog-container__flag__item">
-					<button type="button" class="catalog-container__flag" data-path="three"></button>
+				<li class="catalog-flag__item">
+					<button type="button" class="catalog-flag__btn catalog-flag__btn-active flag-ita" data-path="ita"></button>
 				</li>
-				<li class="catalog-container__flag__item">
-					<button type="button" class="catalog-container__flag" data-path="phour"></button>
+				<li class="catalog-flag__item">
+					<button type="button" class="catalog-flag__btn flag-rus" data-path="rus"></button>
 				</li>
-				<li class="catalog-container__flag__item">
-					<button type="button" class="catalog-container__flag" data-path="one"></button>
+				<li class="catalog-flag__item">
+					<button type="button" class="catalog-flag__btn flag-bel" data-path="bel"></button>
 				</li>
 			</ul>
 		</div>
-		<p class="reset-title catalog-container__paragraph">
+		<p class="reset-title catalog__paragraph" data-target="fra">
 			Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
 			политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
 			частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
-			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы.
+			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Франция)
 		</p>
-		<div class="catalog-container__content">
-			<div class="catalog-container__content-info">
-				<img src="." alt="Доменико Гирландайо">
-				<h3 class="catalog-container__content-info-name">
+		<p class="reset-title catalog__paragraph" data-target="deu">
+			Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+			политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
+			частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Германия)
+		</p>
+		<p class="reset-title catalog__paragraph  catalog__paragraph-active" data-target="ita">
+			Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+			политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
+			частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Италия)
+		</p>
+		<p class="reset-title catalog__paragraph" data-target="rus">
+			Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+			политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
+			частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Россия)
+		</p>
+		<p class="reset-title catalog__paragraph" data-target="bel">
+			Акционеры крупнейших компаний, которые представляют собой яркий пример континентально-европейского типа
+			политической культуры, будут объявлены нарушающими общечеловеческие нормы этики и морали. Являясь всего лишь
+			частью общей картины, стремящиеся вытеснить традиционное производство, нанотехнологии и по сей день остаются
+			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Бельгия)
+		</p>
+		<div class="catalog__content">
+			<div class="catalog__content-info info-content">
+				<img src="img/Catalog/Girlandayo.jpg" alt="Доменико Гирландайо">
+				<h3 class="info-content__name">
 					Доменико Гирландайо
 				</h3>
-				<p class="reset-title catalog-container__content-info-date">
+				<p class="reset-title info-content__date">
 					2 июня 1448 — 11 января 1494.
 				</p>
-				<p class="reset-title catalog-container__content-info-description">
+				<p class="reset-title info-content__description">
 					Один из ведущих флорентийских художников Кватроченто, основатель художественной династии, которую
 					продолжили его брат Давид и сын Ридольфо. Глава художественной мастерской, где юный Микеланджело в
 					течение года овладевал профессиональными навыками. Автор фресковых циклов, в которых выпукло, со
@@ -1120,109 +1148,441 @@
 					знатные граждане Флоренции в костюмах того времени).
 				</p>
 			</div>
-			<div class="catalog-container__content-period">
-				<button type="button" class="catalog-container__content-period-date">
+			<div class="catalog__accordion" id="accordion">
+				<button type="button" class="accordion-date">
 					С 1400 по 1499 гг.
 				</button>
 				<div>
-					<p class="catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list" data-target="fra">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Бенедетто ди Биндо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Бергоньоне, Амброджо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Биссоло, Франческо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Больтраффио, Джованни</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Бонсиньори, Франческо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Боттичини, Рафаэлло</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Брамантино</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Бреа, Людовико</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Бьяджо д’Антонио Туччи</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Веккьетта</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Андреа Верроккьо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Доменико Гирландайо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Беноццо Гоццоли</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Граначчи, Франческо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Грегорио ди Чекко</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Джованни да Удине</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Джованни ди Паоло</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Джорджоне</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Парентино, Бернардо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Пезеллино</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Пьетро Перуджино</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Перуцци, Бальдассаре</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Пизанелло</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Пинтуриккьо</button>
+						</li>
+					</ul>
+					<ul class="accordion__list" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 1500 по 1599 гг.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list" data-target="fra">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 1600 по 1699 гг.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 1700 по 1799 гг.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 1800 по 1899 гг.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 1900 по 1999 гг.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа
-						Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+						</li>
+					</ul>
 				</div>
-				<button type="button" class="catalog-container__content-period-date">
+				<button type="button" class="accordion-date">
 					С 2000 г.
 				</button>
 				<div>
-					<p class="reset-title catalog-container__content-period-name">
-						Бенедетто ди Биндо Бергоньоне, Амброджо Биссоло, Франческо Больтраффио, Джованни Бонсиньори,
-						Франческо Боттичини, Рафаэлло Брамантино Бреа, Людовико Бьяджо д’Антонио Туччи, Веккьетта,
-						Андреа Верроккьо,<span class="catalog-container__content-period-name-grinlandayo">Доменико
-							Гирландайо</span>, Беноццо Гоццоли Граначчи, Франческо Грегорио ди Чекко, Джованни да
-						Удине, Джованни ди Паоло, Джорджоне Парентино, Бернардо Пезеллино, Пьетро Перуджино Перуцци,
-						Бальдассаре Пизанелло Пинтуриккьо
-					</p>
+					<ul class="accordion__list">
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</div>
 	</section>
 
-	<section class="container events__container" id="events">
+	<section class="container events__container" style="display: none;" id="events">
 		<ul class="events__container__list">
 			<li class="events__container__item">
 				<figure class="events__container__item__figure">
@@ -1279,7 +1639,7 @@
 		<a href="" class="events__container__all">Все события</a>
 	</section>
 
-	<section class="container publications__container" id="publication">
+	<section class="container publications__container" style="display: none;" id="publication">
 		<div class="publication__container__left">
 			<h2 class="reset-title container__heading publications__container__heading">Издания</h2>
 			<h4 class="reset-title publication__container__left__heading">Категории</h4>
@@ -1417,7 +1777,7 @@
 		</div>
 	</section>
 
-	<section class="container projects__container" id="projects">
+	<section class="container projects__container" style="display: none;" id="projects">
 		<h2 class="reset-title container__heading">
 			Проекты
 		</h2>
@@ -1460,7 +1820,7 @@
 		</div>
 	</section>
 
-	<section class="container contacts__container" id="contacts">
+	<section class="container contacts__container" style="display: none;" id="contacts">
 		<div class="contacts__container__left">
 			<h3 class="reset-title contacts__container__left__heading">
 				Шоурум №4
@@ -1491,7 +1851,7 @@
 		<div class="contacts__container__right__map">MAP</div>
 	</section>
 
-	<footer class="footer">
+	<footer class="footer" style="display: none;">
 		<img src="." alt="Логотип__Blanchard" class="header-top__logo">
 		<div class="footer__social">
 			<ul class="footer__social__list">

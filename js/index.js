@@ -431,6 +431,42 @@ new Swiper('.gallery-right__swiper', {
     // },
 });
 
+//Аккордеон
+$(function () {
+    $("#accordion").accordion({
+      heightStyle: "content",
+    });
+  });
+
+//Табы
+document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('.catalog-flag__btn').forEach(function (tabsBtn) {
+      tabsBtn.addEventListener('click', function (event) {
+        const path = event.currentTarget.dataset.path
+  
+  
+        document.querySelectorAll('.catalog__paragraph').forEach(function (tabContent) {
+          tabContent.classList.remove('catalog__paragraph-active');
+        });
+        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__paragraph-active');
+  
+        document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
+          workStep.classList.remove('catalog-flag__btn-active');
+        });
+        document.querySelector(`[data-path="${path}"]`).classList.add('catalog-flag__btn-active');
+
+        document.querySelectorAll('.accordion__list').forEach(function (accordList) {
+            accordList.classList.remove('accordion__list-active');
+        });
+        document.querySelector(`[data-path="${path}"]`).classList.add('accordion__list-active');
+        
+        // $("#accordion").accordion("refresh");
+      });
+    });
+  });
+
+
+  
 
 
 
