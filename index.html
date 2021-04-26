@@ -33,7 +33,7 @@
 </head>
 
 <body>
-	<header style="display: none;">
+	<header>
 		<div class="container-top">
 			<div class="container header-top">
 				<button class="header-burger">
@@ -243,7 +243,7 @@
 		</div>
 	</header>
 
-	<section class="hero-section" style="display: none;">
+	<section class="hero-section">
 		<div class="container hero-container">
 			<h3 class="reset-title hero-container__heading">
 				Прикоснитесь к&nbsp;прекрасному
@@ -276,7 +276,7 @@
 		</div>
 	</section>
 
-	<section class="container aboutUs" style="display: none;" id="about-us">
+	<section class="container aboutUs" id="about-us">
 		<h2 class="reset-title container-heading aboutUs__heading">
 			О нас
 		</h2>
@@ -292,7 +292,7 @@
 		</p>
 	</section>
 
-	<section class="gallery" style="display: none;" id="gallery">
+	<section class="gallery" id="gallery">
 		<div class="container gallery-content">
 			<div class="gallery-left">
 				<h2 class="reset-title container-heading gallery-left__heading">Галерея</h2>
@@ -1132,8 +1132,8 @@
 			уделом либералов, которые жаждут быть функционально разнесены на независимые элементы. (Бельгия)
 		</p>
 		<div class="catalog__content">
-			<div class="catalog__content-info info-content">
-				<img src="img/Catalog/Girlandayo.jpg" alt="Доменико Гирландайо">
+			<div class="catalog__content-info info-content info-content-active" data-target="ghirlandaio">
+				<img src="img/Catalog/Girlandayo.jpg" alt="Автопортрет Доменико Гирландайо">
 				<h3 class="info-content__name">
 					Доменико Гирландайо
 				</h3>
@@ -1148,211 +1148,235 @@
 					знатные граждане Флоренции в костюмах того времени).
 				</p>
 			</div>
+			<div class="catalog__content-info info-content" data-target="gozzoli">
+				<img src="img/Catalog/gozzoli.jpg" alt="Автопортрет Беноццо Гоццоли">
+				<h3 class="info-content__name">
+					Беноццо Гоццоли
+				</h3>
+				<p class="reset-title info-content__date">
+					2 июня 1448 — 11 января 1494.
+				</p>
+				<p class="reset-title info-content__description">
+					Самостоятельная творческая деятельность Беноццо Гоццоли началась в 1450-е годы. Он известен в основном как автор многочисленных фресок, из которых самая знаменитая — роспись Капеллы волхвов в Палаццо Медичи-Риккарди во Флоренции.
+				</p>
+			</div>
+			<div class="catalog__content-info info-content" data-target="noinfo">
+				<img src="img/Catalog/noFoto.jpg" alt="Нет фото">
+				<h3 class="info-content__name">
+					Имя автора
+				</h3>
+				<p class="reset-title info-content__date">
+					Дата рождения — Дата смерти.
+				</p>
+				<p class="reset-title info-content__description">
+					Здесь будет отображаться информация о выбранном авторе, при добавлении.
+				</p>
+			</div>
 			<div class="catalog__accordion" id="accordion">
 				<button type="button" class="accordion-date">
 					С 1400 по 1499 гг.
 				</button>
 				<div>
-					<ul class="accordion__list" data-target="fra">
+					<ul class="accordion__list accordion__list-14" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1400-1499 гг.</button>
-						</li>
-					</ul>
-					<ul class="accordion__list" data-target="deu">
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя немецкого художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1400-1499 гг.</button>
 						</li>
 					</ul>
-					<ul class="accordion__list accordion__list-active" data-target="ita">
+					<ul class="accordion__list accordion__list-14" data-target="deu">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Бенедетто ди Биндо</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Бергоньоне, Амброджо</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Биссоло, Франческо</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Больтраффио, Джованни</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Бонсиньори, Франческо</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Боттичини, Рафаэлло</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Брамантино</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Бреа, Людовико</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Бьяджо д’Антонио Туччи</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Веккьетта</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Андреа Верроккьо</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Доменико Гирландайо</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Беноццо Гоццоли</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Граначчи, Франческо</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Грегорио ди Чекко</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Джованни да Удине</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Джованни ди Паоло</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Джорджоне</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Парентино, Бернардо</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Пезеллино</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Пьетро Перуджино</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Перуцци, Бальдассаре</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Пизанелло</button>
-						</li>
-						<li class="accordion__item">
-							<button class="accordion__item-btn">Пинтуриккьо</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1400-1499 гг.</button>
 						</li>
 					</ul>
-					<ul class="accordion__list" data-target="rus">
+					<ul class="accordion__list accordion__list-14 accordion__list-active" data-target="ita">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Бенедетто ди Биндо</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Бергоньоне, Амброджо</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Биссоло, Франческо</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Больтраффио, Джованни</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Бонсиньори, Франческо</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Боттичини, Рафаэлло</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Брамантино</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Бреа, Людовико</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Бьяджо д’Антонио Туччи</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя русского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Веккьетта</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Андреа Верроккьо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn accordion__item-btn-active" data-path="ghirlandaio">Доменико Гирландайо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="gozzoli">Беноццо Гоццоли</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Граначчи, Франческо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Грегорио ди Чекко</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Джованни да Удине</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Джованни ди Паоло</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Джорджоне</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Парентино, Бернардо</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Пезеллино</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Пьетро Перуджино</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Перуцци, Бальдассаре</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Пизанелло</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Пинтуриккьо</button>
 						</li>
 					</ul>
-					<ul class="accordion__list" data-target="bel">
+					<ul class="accordion__list accordion__list-14" data-target="rus">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя бельгийского художника 1400-1499 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1400-1499 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-14" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1400-1499 гг.</button>
 						</li>
 					</ul>
 				</div>
@@ -1360,36 +1384,188 @@
 					С 1500 по 1599 гг.
 				</button>
 				<div>
-					<ul class="accordion__list" data-target="fra">
+					<ul class="accordion__list accordion__list-15" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1500-1599 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1500-1599 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-15" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1500-1599 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-15 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1500-1599 гг.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-15" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1500-1599 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-15" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1500-1599 гг.</button>
 						</li>
 					</ul>
 				</div>
@@ -1397,184 +1573,944 @@
 					С 1600 по 1699 гг.
 				</button>
 				<div>
-					<ul class="accordion__list">
+					<ul class="accordion__list accordion__list-16" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1600-1699 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1600-1699 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-16" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1600-1699 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-16 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1600-1699 гг.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-16" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1600-1699 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-16" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1600-1699 гг.</button>
 						</li>
 					</ul>
 				</div>
 				<button type="button" class="accordion-date">
 					С 1700 по 1799 гг.
 				</button>
-				<div>
-					<ul class="accordion__list">
+				<div>					
+					<ul class="accordion__list accordion__list-17" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1700-1799 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1700-1799 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-17" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1700-1799 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-17 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1700-1799 гг.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-17" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1700-1799 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-17" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1700-1799 гг.</button>
 						</li>
 					</ul>
 				</div>
 				<button type="button" class="accordion-date">
 					С 1800 по 1899 гг.
 				</button>
-				<div>
-					<ul class="accordion__list">
+				<div>					
+					<ul class="accordion__list accordion__list-18" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1800-1899 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1800-1899 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-18" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1800-1899 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-18 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1800-1899 гг.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-18" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1800-1899 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-18" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1800-1899 гг.</button>
 						</li>
 					</ul>
 				</div>
 				<button type="button" class="accordion-date">
 					С 1900 по 1999 гг.
 				</button>
-				<div>
-					<ul class="accordion__list">
+				<div>					
+					<ul class="accordion__list accordion__list-19" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника 1900-1999 гг.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника 1900-1999 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-19" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника 1900-1999 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-19 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника 1900-1999 гг.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-19" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника 1900-1999 гг.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-19" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника 1900-1999 гг.</button>
 						</li>
 					</ul>
 				</div>
 				<button type="button" class="accordion-date">
 					С 2000 г.
 				</button>
-				<div>
-					<ul class="accordion__list">
+				<div>					
+					<ul class="accordion__list accordion__list-20" data-target="fra">
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
 						</li>
 						<li class="accordion__item">
-							<button class="accordion__item-btn">Имя французского художника с 2000 г.</button>
+							<button class="accordion__item-btn" data-path="noinfo">Имя французского художника c 2000 г.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-20" data-target="deu">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя немецкого художника c 2000 г.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-20 accordion__list-active" data-target="ita">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя итальянского художника c 2000 г.</button>
+						</li>			
+					</ul>
+					<ul class="accordion__list accordion__list-20" data-target="rus">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя русского художника c 2000 г.</button>
+						</li>
+					</ul>
+					<ul class="accordion__list accordion__list-20" data-target="bel">
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
+						</li>
+						<li class="accordion__item">
+							<button class="accordion__item-btn" data-path="noinfo">Имя бельгийского художника c 2000 г.</button>
 						</li>
 					</ul>
 				</div>
@@ -1582,7 +2518,7 @@
 		</div>
 	</section>
 
-	<section class="container events__container" style="display: none;" id="events">
+	<section class="container events__container" id="events">
 		<ul class="events__container__list">
 			<li class="events__container__item">
 				<figure class="events__container__item__figure">
@@ -1639,7 +2575,7 @@
 		<a href="" class="events__container__all">Все события</a>
 	</section>
 
-	<section class="container publications__container" style="display: none;" id="publication">
+	<section class="container publications__container" id="publication">
 		<div class="publication__container__left">
 			<h2 class="reset-title container__heading publications__container__heading">Издания</h2>
 			<h4 class="reset-title publication__container__left__heading">Категории</h4>
@@ -1777,7 +2713,7 @@
 		</div>
 	</section>
 
-	<section class="container projects__container" style="display: none;" id="projects">
+	<section class="container projects__container" id="projects">
 		<h2 class="reset-title container__heading">
 			Проекты
 		</h2>
@@ -1820,7 +2756,7 @@
 		</div>
 	</section>
 
-	<section class="container contacts__container" style="display: none;" id="contacts">
+	<section class="container contacts__container" id="contacts">
 		<div class="contacts__container__left">
 			<h3 class="reset-title contacts__container__left__heading">
 				Шоурум №4
@@ -1851,7 +2787,7 @@
 		<div class="contacts__container__right__map">MAP</div>
 	</section>
 
-	<footer class="footer" style="display: none;">
+	<footer class="footer">
 		<img src="." alt="Логотип__Blanchard" class="header-top__logo">
 		<div class="footer__social">
 			<ul class="footer__social__list">

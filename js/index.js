@@ -328,7 +328,7 @@ $(document).ready(function () {
     });
 });
 
-$(document).keydown(function(e) {
+$(document).keydown(function (e) {
     if (e.keyCode === 27) {
         e.stopPropagation();
         $('.gallery__modal-01').removeClass('active');
@@ -396,14 +396,14 @@ new Swiper('.gallery-right__swiper', {
         pageUpDown: false,
     },
     watchOverflow: true,
-    slidesPerColumnFill: 'row',    
+    slidesPerColumnFill: 'row',
 
     breakpoints: {
         1025: {
             slidesPerView: 3,
             slidesPerGroup: 3,
             slidesPerColumn: 2,
-            spaceBetween: 50,         
+            spaceBetween: 50,
         },
         500: {
             slidesPerView: 2,
@@ -434,39 +434,65 @@ new Swiper('.gallery-right__swiper', {
 //Аккордеон
 $(function () {
     $("#accordion").accordion({
-      heightStyle: "content",
+        collapsible: true,
+        heightStyle: "content",
     });
-  });
+});
 
 //Табы
 document.addEventListener('DOMContentLoaded', function () {
     document.querySelectorAll('.catalog-flag__btn').forEach(function (tabsBtn) {
-      tabsBtn.addEventListener('click', function (event) {
-        const path = event.currentTarget.dataset.path
-  
-  
-        document.querySelectorAll('.catalog__paragraph').forEach(function (tabContent) {
-          tabContent.classList.remove('catalog__paragraph-active');
-        });
-        document.querySelector(`[data-target="${path}"]`).classList.add('catalog__paragraph-active');
-  
-        document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
-          workStep.classList.remove('catalog-flag__btn-active');
-        });
-        document.querySelector(`[data-path="${path}"]`).classList.add('catalog-flag__btn-active');
+        tabsBtn.addEventListener('click', function (event) {
+            const path = event.currentTarget.dataset.path
 
-        document.querySelectorAll('.accordion__list').forEach(function (accordList) {
-            accordList.classList.remove('accordion__list-active');
+            document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
+                workStep.classList.remove('catalog-flag__btn-active');
+            });
+            document.querySelector(`[data-path="${path}"]`).classList.add('catalog-flag__btn-active');
+
+            document.querySelectorAll('.catalog__paragraph').forEach(function (tabContent) {
+                tabContent.classList.remove('catalog__paragraph-active');
+            });
+            document.querySelector(`.catalog__paragraph[data-target="${path}"]`).classList.add('catalog__paragraph-active');
+
+            document.querySelectorAll('.accordion__list').forEach(function (accordList) {
+                accordList.classList.remove('accordion__list-active');
+            });
+            document.querySelector(`.accordion__list-14[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-15[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-16[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-17[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-18[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-19[data-target="${path}"]`).classList.add('accordion__list-active');
+            document.querySelector(`.accordion__list-20[data-target="${path}"]`).classList.add('accordion__list-active');
+
+            $("#accordion").accordion("refresh");
         });
-        document.querySelector(`[data-path="${path}"]`).classList.add('accordion__list-active');
-        
-        // $("#accordion").accordion("refresh");
-      });
     });
-  });
+
+    document.querySelectorAll('.accordion__item-btn').forEach(function (tabsCont) {
+        tabsCont.addEventListener('click', function (event) {
+            const path = event.currentTarget.dataset.path
+
+            document.querySelectorAll('.accordion__item-btn').forEach(function (workStep) {
+                workStep.classList.remove('accordion__item-btn-active');
+            });
+            document.querySelector(`.accordion__item-btn[data-path="${path}"]`).classList.add('accordion__item-btn-active');
+
+            document.querySelectorAll('.info-content').forEach(function (autContent) {
+                autContent.classList.remove('info-content-active');
+            });
+            document.querySelector(`.info-content[data-target="${path}"]`).classList.add('info-content-active');
+
+        });
+    });
+});
 
 
-  
+
+
+
+
 
 
 
