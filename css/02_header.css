@@ -461,7 +461,8 @@
     .header-top__magnifier-closed.is-active {
       display: block;
       position: relative;
-      width: 33px;
+      width: 31px;
+      height: 31px;
       padding-top: 10px;
       padding-bottom: 5px;
       animation: show .5s;
@@ -741,6 +742,7 @@
 }
 
 .header-bottom__dropdown-block {
+  display: none;
   position: absolute;
   margin-top: 19px;
   width: 300px;
@@ -748,11 +750,7 @@
   background-color:rgba(0, 0, 0, 0.6);
 }
 
-.dropdown__block-a, .dropdown__block-b, .dropdown__block-c, .dropdown__block-d, .dropdown__block-e {  
-  display: none;
-}
-
-.dropdown__block-a.is-active, .dropdown__block-b.is-active, .dropdown__block-c.is-active, .dropdown__block-d.is-active, .dropdown__block-e.is-active {
+.dropdown__block-active {
   display: block;
   animation: show .7s;
 }

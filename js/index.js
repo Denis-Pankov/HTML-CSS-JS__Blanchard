@@ -1,49 +1,25 @@
-$(document).ready(function () {
-    $('.dropdown__item-a').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a').toggleClass('is-active');
+// Dropdown-Header
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.header-bottom__item').forEach(function (drD) {
+        drD.addEventListener('click', function (event) {
+            const path = event.currentTarget.dataset.path
+
+            document.querySelectorAll('.header-bottom__dropdown-block').forEach(function (drClosed) {
+                drClosed.classList.remove('dropdown__block-active');
+            });
+            document.querySelector(`.header-bottom__dropdown-block[data-target="${path}"]`).classList.add('dropdown__block-active');
+
+            document.querySelectorAll('.header-bottom__dropdown-arrow').forEach(function (drClosed) {
+                drClosed.classList.remove('is-active');
+            });
+            document.querySelector(`.header-bottom__dropdown-arrow[data-target="${path}"]`).classList.add('is-active');
+
+        });
     });
-    $('.dropdown__item-a').click(function (event) {
-        $('.dropdown__block-b,.dropdown__span-b,.dropdown__block-c,.dropdown__span-c,.dropdown__block-d,.dropdown__span-d,.dropdown__block-e,.dropdown__span-e').removeClass('is-active');
-    });
-    $('.header-bottom__dropdown-item').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a').removeClass('is-active');
-    });
-    $('.dropdown__item-b').click(function (event) {
-        $('.dropdown__block-b,.dropdown__span-b').toggleClass('is-active');
-    });
-    $('.dropdown__item-b').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a,.dropdown__block-c,.dropdown__span-c,.dropdown__block-d,.dropdown__span-d,.dropdown__block-e,.dropdown__span-e').removeClass('is-active');
-    });
-    $('.header-bottom__dropdown-item').click(function (event) {
-        $('.dropdown__block-b,.dropdown__span-b').removeClass('is-active');
-    });
-    $('.dropdown__item-c').click(function (event) {
-        $('.dropdown__block-c,.dropdown__span-c').toggleClass('is-active');
-    });
-    $('.dropdown__item-c').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a,.dropdown__block-b,.dropdown__span-b,.dropdown__block-d,.dropdown__span-d,.dropdown__block-e,.dropdown__span-e').removeClass('is-active');
-    });
-    $('.header-bottom__dropdown-item').click(function (event) {
-        $('.dropdown__block-c,.dropdown__span-c').removeClass('is-active');
-    });
-    $('.dropdown__item-d').click(function (event) {
-        $('.dropdown__block-d,.dropdown__span-d').toggleClass('is-active');
-    });
-    $('.dropdown__item-d').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a,.dropdown__block-b,.dropdown__span-b,.dropdown__block-c,.dropdown__span-c,.dropdown__block-e,.dropdown__span-e').removeClass('is-active');
-    });
-    $('.header-bottom__dropdown-item').click(function (event) {
-        $('.dropdown__block-d,.dropdown__span-d').removeClass('is-active');
-    });
-    $('.dropdown__item-e').click(function (event) {
-        $('.dropdown__block-e,.dropdown__span-e').toggleClass('is-active');
-    });
-    $('.dropdown__item-e').click(function (event) {
-        $('.dropdown__block-a,.dropdown__span-a,.dropdown__block-b,.dropdown__span-b,.dropdown__block-c,.dropdown__span-c,.dropdown__block-d,.dropdown__span-d').removeClass('is-active');
-    });
-    $('.header-bottom__dropdown-item').click(function (event) {
-        $('.dropdown__block-e,.dropdown__span-e').removeClass('is-active');
-    });
+});
+
+$(document).ready(function () { 
     $('.header-burger').click(function (event) {
         $('.header-menu__dropdown,.header-burger,.header-burger:before,.header-burger__span,.header-burger:after').toggleClass('active');
     });
@@ -56,314 +32,7 @@ $(document).ready(function () {
     $('.header-top__magnifier-closed').click(function (event) {
         $('.header-top,.header-top__magnifier-input,.header-top__magnifier-closed,.header-burger,.header-top__logo,.header-top__magnifier').removeClass('is-active');
     });
-    $('.slide-01').click(function (event) {
-        $('.gallery__modal-01').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-01').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-01').removeClass('active');
-    });
-    $('.slide-02').click(function (event) {
-        $('.gallery__modal-02').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-02').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-02').removeClass('active');
-    });
-    $('.slide-03').click(function (event) {
-        $('.gallery__modal-03').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-03').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-03').removeClass('active');
-    });
-    $('.slide-04').click(function (event) {
-        $('.gallery__modal-04').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-04').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-04').removeClass('active');
-    });
-    $('.slide-05').click(function (event) {
-        $('.gallery__modal-05').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-05').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-05').removeClass('active');
-    });
-    $('.slide-06').click(function (event) {
-        $('.gallery__modal-06').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-06').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-06').removeClass('active');
-    });
-    $('.slide-11').click(function (event) {
-        $('.gallery__modal-11').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-11').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-11').removeClass('active');
-    });
-    $('.slide-12').click(function (event) {
-        $('.gallery__modal-12').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-12').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-12').removeClass('active');
-    });
-    $('.slide-13').click(function (event) {
-        $('.gallery__modal-13').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-13').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-13').removeClass('active');
-    });
-    $('.slide-14').click(function (event) {
-        $('.gallery__modal-14').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-14').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-14').removeClass('active');
-    });
-    $('.slide-15').click(function (event) {
-        $('.gallery__modal-15').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-15').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-15').removeClass('active');
-    });
-    $('.slide-16').click(function (event) {
-        $('.gallery__modal-16').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-16').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-16').removeClass('active');
-    });
-    $('.slide-17').click(function (event) {
-        $('.gallery__modal-17').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-17').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-17').removeClass('active');
-    });
-    $('.slide-18').click(function (event) {
-        $('.gallery__modal-18').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-18').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-18').removeClass('active');
-    });
-    $('.slide-19').click(function (event) {
-        $('.gallery__modal-19').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-19').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-19').removeClass('active');
-    });
-    $('.slide-20').click(function (event) {
-        $('.gallery__modal-20').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-20').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-20').removeClass('active');
-    });
-    $('.slide-21').click(function (event) {
-        $('.gallery__modal-21').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-21').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-21').removeClass('active');
-    });
-    $('.slide-22').click(function (event) {
-        $('.gallery__modal-22').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-22').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-22').removeClass('active');
-    });
-    $('.slide-23').click(function (event) {
-        $('.gallery__modal-23').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-23').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-23').removeClass('active');
-    });
-    $('.slide-24').click(function (event) {
-        $('.gallery__modal-24').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-24').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-24').removeClass('active');
-    });
-    $('.slide-25').click(function (event) {
-        $('.gallery__modal-25').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-25').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-25').removeClass('active');
-    });
-    $('.slide-26').click(function (event) {
-        $('.gallery__modal-26').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-26').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-26').removeClass('active');
-    });
-    $('.slide-27').click(function (event) {
-        $('.gallery__modal-27').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-27').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-27').removeClass('active');
-    });
-    $('.slide-28').click(function (event) {
-        $('.gallery__modal-28').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-28').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-28').removeClass('active');
-    });
-    $('.slide-29').click(function (event) {
-        $('.gallery__modal-29').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-29').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-29').removeClass('active');
-    });
-    $('.slide-30').click(function (event) {
-        $('.gallery__modal-30').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-30').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-30').removeClass('active');
-    });
-    $('.slide-31').click(function (event) {
-        $('.gallery__modal-31').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-31').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-31').removeClass('active');
-    });
-    $('.slide-32').click(function (event) {
-        $('.gallery__modal-32').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-32').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-32').removeClass('active');
-    });
-    $('.slide-33').click(function (event) {
-        $('.gallery__modal-33').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-33').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-33').removeClass('active');
-    });
-    $('.slide-34').click(function (event) {
-        $('.gallery__modal-34').toggleClass('active');
-    });
-    $('.modal-content__closed').click(function (event) {
-        $('.gallery__modal-34').removeClass('active');
-    });
-    $('.gallery__modal').click(function (event) {
-        $('.gallery__modal-34').removeClass('active');
-    });
 });
-
-$(document).keydown(function (e) {
-    if (e.keyCode === 27) {
-        e.stopPropagation();
-        $('.gallery__modal-01').removeClass('active');
-        $('.gallery__modal-02').removeClass('active');
-        $('.gallery__modal-03').removeClass('active');
-        $('.gallery__modal-04').removeClass('active');
-        $('.gallery__modal-05').removeClass('active');
-        $('.gallery__modal-06').removeClass('active');
-        $('.gallery__modal-11').removeClass('active');
-        $('.gallery__modal-12').removeClass('active');
-        $('.gallery__modal-13').removeClass('active');
-        $('.gallery__modal-14').removeClass('active');
-        $('.gallery__modal-15').removeClass('active');
-        $('.gallery__modal-16').removeClass('active');
-        $('.gallery__modal-17').removeClass('active');
-        $('.gallery__modal-18').removeClass('active');
-        $('.gallery__modal-19').removeClass('active');
-        $('.gallery__modal-20').removeClass('active');
-        $('.gallery__modal-21').removeClass('active');
-        $('.gallery__modal-22').removeClass('active');
-        $('.gallery__modal-23').removeClass('active');
-        $('.gallery__modal-24').removeClass('active');
-        $('.gallery__modal-25').removeClass('active');
-        $('.gallery__modal-26').removeClass('active');
-        $('.gallery__modal-27').removeClass('active');
-        $('.gallery__modal-28').removeClass('active');
-        $('.gallery__modal-29').removeClass('active');
-        $('.gallery__modal-30').removeClass('active');
-        $('.gallery__modal-31').removeClass('active');
-        $('.gallery__modal-32').removeClass('active');
-        $('.gallery__modal-33').removeClass('active');
-        $('.gallery__modal-34').removeClass('active');
-    }
-});
-
 
 // Hero
 var mySwiper = new Swiper('.swiper-container', {
@@ -429,6 +98,42 @@ new Swiper('.gallery-right__swiper', {
     //     containerRoleDescriptionMessage: '',
     //     itemRoleDescriptionMessage: '',
     // },
+});
+
+// Modal
+document.addEventListener('DOMContentLoaded', function () {
+
+    document.querySelectorAll('.gallery__image').forEach(function (modal) {
+        modal.addEventListener('click', function (event) {
+            const path = event.currentTarget.dataset.path
+
+            document.querySelector(`.gallery__modal[data-target="${path}"]`).classList.add('gallery__modal-active');
+        });
+    });
+
+    document.querySelectorAll('.modal-content__closed').forEach(function (modal) {
+        modal.addEventListener('click', function (event) {
+            const path = event.currentTarget.dataset.path
+
+            document.querySelectorAll('.gallery__modal').forEach(function (modalClosed) {
+                modalClosed.classList.remove('gallery__modal-active');
+            });
+        });
+    });
+
+    // НЕ ПОНЯЛ КАК ЗАКРЫТЬ, ПРИ НАЖАТИИ НА ФОН .gallery__modal::before, не работает, а если исп.как сделал ниже, по щелчку по любому месту закрывает.
+
+    // document.querySelectorAll('.gallery__modal').forEach(function (modalBg) {
+    //     modalBg.addEventListener('click', function (event) {
+    //         const path = event.currentTarget.dataset.path
+
+    //         document.querySelectorAll('.gallery__modal').forEach(function (modalClosedBg) {
+    //             modalClosedBg.classList.remove('active');
+    //         });
+
+    //     });
+    // });
+
 });
 
 //Аккордеон
