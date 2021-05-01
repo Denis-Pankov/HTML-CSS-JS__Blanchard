@@ -25,7 +25,7 @@
 
 .header-top__logo {
   width: 173px;
-  margin-left: 3px;
+  margin-left: 8px;
 }
 
 @media (max-width:400px) {
@@ -555,6 +555,7 @@
 /* Bottom */
 .container-bottom {
   position: relative;
+  padding-left: 9px;
   background-color: rgba(0, 0, 0, 0.4);
   z-index: 2;
 }
@@ -572,7 +573,7 @@
 }
 
 .header-bottom__search-magnifier {
-  transform: translateY(6px);
+  transform: translate(7px, 5px);
   background-color: transparent;
   border: 2px solid transparent;
   transition: border-color 200ms;
@@ -594,7 +595,6 @@
 
 .header-bottom__search-input {
   width: 218px;
-  margin-right: -16px;
   padding-left: 3px;
   padding-top: 0px;
   padding-right: 0px;

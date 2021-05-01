@@ -49,7 +49,12 @@ $(document).ready(function () {
   $('.overlay').click(function (event) {
     $('.overlay').removeClass('overlay-active');
   });
+  $('.events__all').click(function (event) {
+    $('.events__item-hidden').toggleClass('events__item-active');
+    $('.events__item-hidden800').toggleClass('events__item-active');
+  });
 });
+
 
 // Hero
 var mySwiper = new Swiper('.swiper-container', {
@@ -195,6 +200,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     });
   });
+});
+
+// События
+new Swiper('.events-swiper', {
+  // preloadImages: true,
+  slidesPerView: 1,
 });
 
 

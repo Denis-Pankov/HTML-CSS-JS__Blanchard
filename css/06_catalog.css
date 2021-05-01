@@ -1,9 +1,11 @@
 .catalog-container {
     margin-top: 92px;
+    margin-bottom: 80px;
 }
 
 .catalog__heading {
     margin-right: 33px;
+    padding-left: 5px;
 }
 
 .catalog__heading-flag {
@@ -129,6 +131,7 @@
     display: none;
     max-width: 1080px;
     padding-bottom: 37px;
+    padding-left: 5px;
     line-height: 32px;
 }
 
@@ -190,6 +193,7 @@
 .info-content__name {
     margin-bottom: 10px;
     padding-top: 7px;
+    padding-left: 5px;
     font-size: 24px;
     font-weight: 600;
     line-height: 32.68px;
@@ -197,6 +201,7 @@
 
 .info-content__date {
     margin-bottom: 10px;
+    padding-left: 5px;
     font-size: 12px;
     font-weight: 16.34px;
     color: #999999;
@@ -204,6 +209,7 @@
 
 .info-content__description {
     padding-right: 20px;
+    padding-left: 5px;
     line-height: 32px;
 }
 
@@ -264,11 +270,6 @@
     outline-offset: 5px;
 }
 
-/* .accordion-date:not(:first-child) {
-    border-top: none;
-    border-bottom:  none;
-} */
-
 .ui-accordion .ui-accordion-header {
     padding: 38px 0 44px 0 !important;
 }
@@ -279,8 +280,8 @@
 
 .ui-icon {
     position: absolute;
-    right: 0%;
-    top: 34%;
+    right: 0.5%;
+    top: 35%;
     width: 50px;
     height: 50px;
     border-radius: 50%;
@@ -363,7 +364,7 @@
 .accordion__list {
     display: none;
     flex-direction: column;
-    padding: 25px 30px 28px 0;
+    padding: 25px 30px 20px 0;
     border-top: 1px solid var(--activeD0);
     border-bottom: 1px solid var(--activeD0);
     max-height: 370px;
