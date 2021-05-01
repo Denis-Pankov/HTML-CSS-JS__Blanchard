@@ -8,6 +8,7 @@
   margin-bottom: 20px;
   padding-left: 10px;
   flex-wrap: wrap;
+  min-width: 0;
 }
 
 .events__item {
@@ -129,13 +130,11 @@
 
 @media (max-width:700px) {  
   .events__list {
-    display: block;
     flex-wrap: nowrap;
     min-width: 0;
   }
 
   .events__item {
-    max-width: 100%;
     margin-right: 0;
   }
 

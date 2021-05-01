@@ -205,7 +205,10 @@ document.addEventListener('DOMContentLoaded', function () {
 // События
 new Swiper('.events-swiper', {
   // preloadImages: true,
-  slidesPerView: 1,
+  // slidesPerView: 1,
+  // slidesPerGroup: 1,
+  // slidesPerColumn: 1,
+  // spaceBetween: 0,
 });
 
 
