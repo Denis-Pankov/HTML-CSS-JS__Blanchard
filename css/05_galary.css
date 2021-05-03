@@ -61,7 +61,7 @@
 }
 
 .author__free {
-    padding-bottom: 60px;
+    padding-bottom: 70px;
     margin-top: auto;
 }
 
@@ -163,8 +163,6 @@
     pointer-events: none;
 }
 
-
-
 .choices[data-type*=select-one].is-open:after {
     border-color: transparent transparent #fff #fff;
 }
@@ -176,7 +174,7 @@
 /* Right - swiper */
 
 .gallery-right {
-    max-width: 1138px;
+    max-width: 1155px;
     min-width: 0;
     overflow: hidden;
 }
