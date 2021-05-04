@@ -63,7 +63,7 @@ var mySwiper = new Swiper('.swiper-container', {
   },
 });
 
-// Galery 
+// Gallery 
 const element = document.querySelector('#selectFilter');
 const choices = new Choices(element, {
   searchEnabled: false,

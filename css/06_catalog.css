@@ -1,5 +1,4 @@
 .catalog-container {
-    margin-top: 82px;
     margin-bottom: 81px;
 }
 
@@ -223,6 +222,7 @@
     border-bottom: 1px solid #cacaca;
     background-color: transparent;
     font-size: 24px !important;
+    font-family: 'Opensans', Arial, Helvetica, sans-serif !important;
     font-weight: 600;
     color: #333;
     text-align: left;
@@ -435,6 +435,7 @@
     border: none;
     padding: 0;
     border-bottom: 1px solid transparent;
+    font-family: 'Opensans', Arial, Helvetica, sans-serif !important;
     background-color: transparent;
     transition: color 200ms, border-color 200ms;
 }

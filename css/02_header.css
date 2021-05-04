@@ -289,7 +289,7 @@
   .header-top__list {
     display: flex;
     flex-direction: column;
-    margin-top: 110px;
+    padding-top: 110px;
     font-size: 24px;
     line-height: 2.5;
     margin-bottom: 103px;
@@ -419,7 +419,7 @@
     }
   
     .header-top__list {
-      margin-top: 46px;
+      padding-top: 46px;
       font-size: 16px;
       line-height: 32px;
       margin-bottom: 29px;
@@ -540,6 +540,7 @@
     .header-top-magnifier .header-top__magnifier-closed {
       left: 95%;
       width: 15px;
+      height: 15px;
       animation: show .5s;
     }
 
@@ -742,10 +743,10 @@
 .header-bottom__dropdown-block {
   display: none;
   position: absolute;
-  margin-top: 19px;
   width: 300px;
   padding: 40px;
   background-color:rgba(0, 0, 0, 0.6);
+  transform: translateY(19px);
 }
 
 .dropdown__block-active {
@@ -765,7 +766,6 @@
 }
 
 .simplebar-track.simplebar-vertical {
-  margin-top: 0px;
   margin-right: -19px;
   width: 2px;
   background-color: black;
