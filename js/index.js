@@ -10,8 +10,8 @@ document.addEventListener('DOMContentLoaded', function () {
       });
       document.querySelector(`.header-bottom__dropdown-block[data-target="${path}"]`).classList.add('dropdown__block-active');
 
-      document.querySelectorAll('.header-bottom__dropdown-arrow').forEach(function (drClosed) {
-        drClosed.classList.remove('is-active');
+      document.querySelectorAll('.header-bottom__dropdown-arrow').forEach(function (drClosed1) {
+        drClosed1.classList.remove('is-active');
       });
       document.querySelector(`.header-bottom__dropdown-arrow[data-target="${path}"]`).classList.add('is-active');
 
@@ -162,7 +162,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
         workStep.classList.remove('catalog-flag__btn-active');
       });
-      document.querySelector(`[data-path="${path}"]`).classList.add('catalog-flag__btn-active');
+      document.querySelector(`.catalog-flag__btn[data-path="${path}"]`).classList.add('catalog-flag__btn-active');
 
       document.querySelectorAll('.catalog__paragraph').forEach(function (tabContent) {
         tabContent.classList.remove('catalog__paragraph-active');
