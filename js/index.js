@@ -11,9 +11,9 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector(`.header-bottom__dropdown-block[data-target="${path}"]`).classList.add('dropdown__block-active');
 
       document.querySelectorAll('.header-bottom__dropdown-arrow').forEach(function (drClosed1) {
-        drClosed1.classList.remove('is-active');
+        drClosed1.classList.remove('.header-bottom__dropdown-arrow-active');
       });
-      document.querySelector(`.header-bottom__dropdown-arrow[data-target="${path}"]`).classList.add('is-active');
+      document.querySelector(`.header-bottom__dropdown-arrow[data-target="${path}"]`).classList.add('header-bottom__dropdown-arrow-active');
 
     });
   });
@@ -26,6 +26,15 @@ document.addEventListener('click', (e) => {
     drop.forEach(el => { el.classList.remove(('dropdown__block-active')) })
   }
 });
+
+const drop1 = document.querySelectorAll('.header-bottom__dropdown-arrow')
+
+document.addEventListener('click', (e) => {  
+  if (!e.target.classList.contains('header-bottom__dropdown-arrow') && !e.target.classList.contains('header-bottom__dropdown')) {
+    drop1.forEach(el => { el.classList.remove(('header-bottom__dropdown-arrow-active')) })
+  }
+});
+
 
 $(document).ready(function () {
   $('.header-burger').click(function (event) {
