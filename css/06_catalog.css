@@ -226,6 +226,7 @@
 /* Accordion */
 
 .accordion-date {
+  position: relative;
   width: 100%;
   border: none;
   border-radius: 0;
@@ -238,6 +239,10 @@
   color: #333;
   text-align: left;
   transition: color 200ms, border-color 200ms;
+}
+
+.accordion-date {
+  transform: translateY(1px);
 }
 
 .accordion-date:not(:first-child) {
