@@ -199,6 +199,7 @@
 }
 
 .info-content__name {
+  margin-top: 0;
   margin-bottom: 10px;
   padding-top: 7px;
   padding-left: 1px;
