@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="css/05_gallery.css">
   <link rel="stylesheet" href="css/06_catalog.css">
   <link rel="stylesheet" href="css/07_events.css">
+  <link rel="stylesheet" href="css/08_publications.css">
   <script defer src="assets/simplebar.min.js"></script>
   <script defer src="assets/jquery-3.6.0.slim.min.js"></script>
   <script defer src="assets/swiper-bundle.min.js"></script>
@@ -98,7 +99,7 @@
           <li class="header-bottom__item dropdown__item-a" data-path="item-a">
             <button id="headerBtn" class="header-bottom__dropdown">
               Реализм
-              <span class="header-bottom__dropdown-arrow dropdown__span-a" data-target="item-a"></span>
+              <span class="header-bottom__dropdown-arrow" data-target="item-a"></span>
             </button>
             <div class="header-bottom__dropdown-block" data-target="item-a">
               <ul class="header-bottom__dropdown-list" data-simplebar>
@@ -123,7 +124,7 @@
           <li class="header-bottom__item dropdown__item-b" data-path="item-b">
             <button class="header-bottom__dropdown">
               Импрессионизм
-              <span class="header-bottom__dropdown-arrow dropdown__span-b" data-target="item-b"></span>
+              <span class="header-bottom__dropdown-arrow" data-target="item-b"></span>
             </button>
             <div class="header-bottom__dropdown-block" data-target="item-b">
               <ul class="header-bottom__dropdown-list" data-simplebar>
@@ -145,7 +146,7 @@
           <li class="header-bottom__item dropdown__item-c" data-path="item-c">
             <button class="header-bottom__dropdown">
               Постимпрессионизм
-              <span class="header-bottom__dropdown-arrow dropdown__span-c" data-target="item-c"></span>
+              <span class="header-bottom__dropdown-arrow" data-target="item-c"></span>
             </button>
             <div class="header-bottom__dropdown-block" data-target="item-c">
               <ul class="header-bottom__dropdown-list" data-simplebar>
@@ -168,7 +169,7 @@
           <li class="header-bottom__item dropdown__item-d" data-path="item-d">
             <button class="header-bottom__dropdown">
               Авангард
-              <span class="header-bottom__dropdown-arrow dropdown__span-d" data-target="item-d"></span>
+              <span class="header-bottom__dropdown-arrow" data-target="item-d"></span>
             </button>
             <div class="header-bottom__dropdown-block" data-target="item-d">
               <ul class="header-bottom__dropdown-list" data-simplebar>
@@ -190,7 +191,7 @@
           <li class="header-bottom__item dropdown__item-e" data-path="item-e">
             <button class="header-bottom__dropdown">
               Футуризм
-              <span class="header-bottom__dropdown-arrow dropdown__span-e" data-target="item-e"></span>
+              <span class="header-bottom__dropdown-arrow" data-target="item-e"></span>
             </button>
             <div class="header-bottom__dropdown-block" data-target="item-e">
               <ul class="header-bottom__dropdown-list" data-simplebar>
@@ -7510,80 +7511,83 @@
 
     </section>
 
-    <section class="container publications__container" id="publication">
-      <div class="publication__container__left">
-        <h2 class="reset-title container__heading publications__container__heading">Издания</h2>
-        <h4 class="reset-title publication__container__left__heading">Категории</h4>
-        <label for="check" class="publication__container__left__checkbox__label">
+    <section class="publications" id="publication">
+      <div class="container publications-container">
+      <div class="publication-left">
+        <h2 class="reset-title container-heading publications__heading">Издания</h2>
+        <h4 class="reset-title publication-left__heading">Категории</h4>
+        <label for="check" class="publication-left__checkbox-label">
           <input type="checkbox" name="check" id="check" class="check">
           Бестселлеры
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Искусство
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Архитектура
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Дизайн
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Мода
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Детям
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Художественная литература
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Публицистика
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Путеводители
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Философия
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Учебная литература
           <span></span>
         </label>
-        <label class="publication__container__left__checkbox__label">
+        <label class="publication-left__checkbox-label">
           <input type="checkbox" name="check" class="check">
           Журналы и газеты
           <span></span>
         </label>
-        <h4 class="reset-title publication__container__left__heading">Цена</h4>
-        <div class="publication__container__left__price">
+        <h4 class="reset-title publication-left__heading publication-left__heading-price">Цена</h4>
+        <div class="publication-left-price">
+          <div class="left-price">
           От
-          <input type="number" placeholder="50">
+          <input class="left-price__input" type="number" placeholder="50">
           до
-          <input type="number" placeholder="25 000">
+          <input class="left-price__input" type="number" placeholder="25 000">
           руб.
         </div>
+        </div>
       </div>
-      <div class="publications__container__right">
+      <div class="publications-right">
         <div class="publications__container__right__swiper">
           <ul class="publications__container__right__swiper__list">
             <li class="publications__container__right__swiper__item">
@@ -7645,6 +7649,7 @@
             </li>
           </ul>
         </div>
+      </div>
       </div>
     </section>
 

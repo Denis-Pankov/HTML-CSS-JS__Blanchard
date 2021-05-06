@@ -653,20 +653,20 @@
   border-top: none;
 }
 
-.header-top-magnifier .header-bottom__dropdown-arrow {
+.header-bottom__dropdown-arrow-active  {
   border: 1px solid #ffffff;
   border-right: none;
   border-bottom: none;
   transform: rotate(45deg) translateY(0px);
 }
 
-.header-top-magnifier .header-bottom__dropdown:hover .header-bottom__dropdown-arrow {
+.header-bottom__dropdown:hover .header-bottom__dropdown-arrow-active {
   border: 1px solid var(--activeD0);
   border-right: none;
   border-bottom: none;
 }
 
-.header-top-magnifier .header-bottom__dropdown:active .header-bottom__dropdown-arrow {
+.header-bottom__dropdown:active .header-bottom__dropdown-arrow-active {
   border: 1px solid var(--focusA4);
   border-right: none;
   border-bottom: none;
