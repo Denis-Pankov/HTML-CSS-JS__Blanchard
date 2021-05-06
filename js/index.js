@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
       document.querySelector(`.header-bottom__dropdown-block[data-target="${path}"]`).classList.add('dropdown__block-active');
 
       document.querySelectorAll('.header-bottom__dropdown-arrow').forEach(function (drClosed1) {
-        drClosed1.classList.remove('.header-bottom__dropdown-arrow-active');
+        drClosed1.classList.remove('header-bottom__dropdown-arrow-active');
       });
       document.querySelector(`.header-bottom__dropdown-arrow[data-target="${path}"]`).classList.add('header-bottom__dropdown-arrow-active');
 
