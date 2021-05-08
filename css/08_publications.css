@@ -72,5 +72,52 @@ input::-webkit-inner-spin-button {
 /* RIGHT */
 
 .publications-right {
-  width: 72.1%;
+  width: 72.4%;
+  margin: 0;
+}
+
+.publications-right__swiper-nav {
+  padding-top: 40px;
+  margin-bottom: 21px;
+}
+
+.publications-right__swiper {
+  margin-left: 5px;
+}
+
+.publications-right__swiper-item {
+  max-width: 350px;
+}
+
+.publications-right__swiper-img {
+  margin-bottom: 23px;
+  text-align: center;
+}
+
+.publications-right__swiper img {
+  max-width: 100%;
+}
+
+.publications-right__swiper-signature {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 17px;
+  line-height: 21px;
+}
+
+.publications-right__swiper-name {
+  font-weight: 600;  
+}
+
+.publications-right__swiper-price {
+  font-style: italic;
+}
+
+.publications-right__swiper-btn {
+  padding: 7px 20px;
+  background-color: transparent;
+  border: 2px solid var(--activeD0);
+  border-radius: 100px;
+  font-weight: 700;
+  line-height: 22px;
 }

@@ -1,32 +1,31 @@
 .events-container {
-  margin-bottom: 120px;
+  margin-bottom: 79px;
   overflow: hidden;
   width: 100%;
   min-width: 0;
 }
 
 .events__heading {
-  padding-left: 5px;
-  margin-bottom: 15px;
+  padding-left: 4px;
+  margin-bottom: 14px;
 }
 
 .events__list {
   display: flex;
-  margin-bottom: 20px;
-  padding-left: 10px;
-  flex-wrap: wrap;
+  padding-left: 6px;
   min-width: 0;
+  flex-wrap: wrap;
 }
 
 .events__item {
-  position: relative;  
-  flex: 0 1 31%;
+  position: relative; 
   flex-shrink: 0;
-  margin-right: 50px;
+  margin-right: 48px;
   margin-bottom: 30px;
   border: 1px solid #CACACA;
   max-width: 500px;
-  min-height: 700px; 
+  min-height: 702px;
+  height: auto;
   min-width: 0; 
   animation: show .5s;
 }
@@ -34,13 +33,6 @@
 @media (max-width: 1560px) {  
   .events__item {
     margin-right: 27px;
-    flex: 0 1 31%;
-  }
-}
-
-@media (max-width: 1080px) {  
-  .events__item {
-    flex: 0 1 31%;
   }
 }
 
@@ -48,11 +40,7 @@
   margin-right: 0;
 }
 
-@media (max-width: 960px) {  
-  .events__item {
-    flex: 0 1 47%;
-  }
-
+@media (max-width: 960px) { 
   .events__item:nth-child(3n) {
     margin-right: 27px;
   }
@@ -80,29 +68,29 @@
 
 .events-item__figcaption {
   margin-left: auto;
-  padding-right: 20px;
+  padding-right: 24px;
   max-width: 211px;
   font-size: 12px;
   text-align: end;
   white-space: pre-line;
-  line-height: 16px;
+  line-height: 15px;
 }
 
 .events-item__heading {
-  padding: 4px 30px 0px 50px;
+  padding: 4px 30px 0 50px;
   font-size: 24px;
   font-weight: 600;
   line-height: 33px;
 }
 
 .events-item__content {
-  padding: 1px 45px 0 50px;
-  margin-bottom: 87px;
+  padding: 1px 45px 10px 50px;
+  margin-bottom: 89px;
   line-height: 32px;
 }
 
 .events-item__link {
-  bottom: 6.3%;
+  bottom: 6.8%;
   position: absolute;
   margin: 0 50px;
   padding-bottom: 3px;
@@ -127,7 +115,7 @@
 .events__all {
   display: block;
   margin: 0 auto;
-  padding: 19px 32px;
+  padding: 19px 35px;
   border-radius: 100px;
   background-color: transparent;
   font-weight: 700;
@@ -139,9 +127,9 @@
 
 /* SLIDER */
 @media (max-width: 700px) {
+  
   .events__list {
     width: 100%;
-    display: block;
     padding-left: 0;
     flex-wrap: nowrap;
   }
@@ -149,7 +137,6 @@
 
   .events__item {
     margin: 0;
-    width: 100%;
     max-width: 100%;
     min-width: 0;
   }

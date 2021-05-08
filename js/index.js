@@ -29,7 +29,7 @@ document.addEventListener('click', (e) => {
 
 const drop1 = document.querySelectorAll('.header-bottom__dropdown-arrow')
 
-document.addEventListener('click', (e) => {  
+document.addEventListener('click', (e) => {
   if (!e.target.classList.contains('header-bottom__dropdown-arrow') && !e.target.classList.contains('header-bottom__dropdown')) {
     drop1.forEach(el => { el.classList.remove(('header-bottom__dropdown-arrow-active')) })
   }
@@ -66,7 +66,7 @@ $(document).ready(function () {
 
 
 // Hero
-var mySwiper = new Swiper('.swiper-container', {
+var mySwiper = new Swiper('.hero-swiper', {
   autoplay: {
     delay: 30000,
   },
@@ -222,8 +222,7 @@ function mobileSlider() {
       slidesPerView: 1,
       slidesPerGroup: 1,
       slidesPerColumn: 1,
-      spaceBetween: 0,
-      slideClass: 'events__item',
+      spaceBetween: 50,
     });
 
     slider.dataset.mobile = 'true';
@@ -238,11 +237,38 @@ function mobileSlider() {
   }
 }
 
+
 mobileSlider();
 
 window.addEventListener('resize', () => {
   mobileSlider();
 });
+
+// Издания
+
+var mySwiper = new Swiper('.publications-right', {
+  preloadImages: true,
+  navigation: {
+    prevEl: '.swiper-button-prev',
+    nextEl: '.swiper-button-next',
+  },
+  pagination: {
+    el: '.swiper-pagination',
+    type: 'fraction',
+  },
+  keyboard: {
+    enable: true,
+    onlyInViewport: true,
+    pageUpDown: false,
+  },
+  watchOverflow: true,
+
+  slidesPerView: 3,
+  slidesPerGroup: 3,
+  spaceBetween: 50,
+});
+
+
 
 
 
