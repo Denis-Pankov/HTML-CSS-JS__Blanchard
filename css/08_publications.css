@@ -69,6 +69,81 @@ input::-webkit-inner-spin-button {
     margin: 0;
 }
 
+/* Чекбокс */
+
+label {
+  position: relative;
+  padding-left: 24px;
+  cursor: pointer;
+}
+
+.check {
+  display: none;
+}
+
+.check + .checkbox-selected {
+  position: absolute;
+  top: 10px;
+  left: 0;
+  width: 12px;
+  height: 12px;
+  text-align: center;
+  border: 1px solid #fff;
+}
+
+.check:checked + .checkbox-selected {
+  border: 1px solid #C283F3;
+}
+
+.check + .checkbox-selected:before {
+  position: absolute;
+  top: 3px;
+  right: 0;
+  bottom: 0;
+  left: 3px;
+  width: 4px;
+  height: 4px;
+  box-sizing: border-box;
+  content: '';
+  background-color: var(--hoverF3);  
+  border-radius: 50%;
+  opacity: 0;
+  transition: opacity .3s ease-in-out;
+}
+
+.check:checked + .checkbox-selected:before {
+  opacity: 1;
+}
+
+.publication-left__checkbox-label:hover {
+  color: var(--hoverF3);
+}
+
+.publication-left__checkbox-label:hover .check + .checkbox-selected {
+  border: 1px solid var(--hoverF3);
+}
+
+.publication-left__checkbox-label:active {
+  color: var(--focusA4);
+}
+
+.publication-left__checkbox-label:active .check + .checkbox-selected {
+  border: 1px solid var(--focusA4);
+}
+
+.check:checked + .checkbox-selected:before .publication-left__checkbox-label {
+  color: yellow;
+}
+
+/* .check:checked ~ .checkbox-selected:before .publication-left__checkbox-label {
+  color: yellow;
+}
+
+.check:checked + label {
+  color: blue;
+} */
+
+
 /* RIGHT */
 
 .publications-right {
@@ -82,11 +157,15 @@ input::-webkit-inner-spin-button {
 }
 
 .publications-right__swiper {
-  margin-left: 5px;
+  padding-left: 5px;
 }
 
 .publications-right__swiper-item {
   max-width: 350px;
+}
+
+.publications-right__swiper-item:last-child {
+  transform: translateX(-5px);
 }
 
 .publications-right__swiper-img {
@@ -122,49 +201,4 @@ input::-webkit-inner-spin-button {
   line-height: 22px;
 }
 
-/* Чекбокс */
-
-label {
-  position: relative;
-  padding-left: 24px;
-  cursor: pointer;
-}
-
-.check {
-  display: none;
-}
-
-.check + span {
-  position: absolute;
-  top: 10px;
-  left: 0;
-  width: 12px;
-  height: 12px;
-  text-align: center;
-  border: 1px solid #fff;
-}
-
-.check:checked + span {
-  border: 1px solid #C283F3;
-}
-
-.check + span:before {
-  position: absolute;
-  top: 3px;
-  right: 0;
-  bottom: 0;
-  left: 3px;
-  width: 4px;
-  height: 4px;
-  box-sizing: border-box;
-  content: '';
-  background-color: #C283F3;
-  border-radius: 50%;
-  opacity: 0;
-  transition: opacity .3s ease-in-out;
-}
-
-.check:checked + span:before {
-  opacity: 1;
-}
 
