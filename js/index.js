@@ -244,6 +244,11 @@ window.addEventListener('resize', () => {
   mobileSlider();
 });
 
+document.querySelector('.events__all').addEventListener('click', (e) => {
+  document.querySelectorAll('.events__item').forEach(el => {el.classList.add('events__item-active')});
+  e.currentTarget.style.display = 'none';
+});
+
 // Издания
 
 var mySwiper = new Swiper('.publications-right', {
