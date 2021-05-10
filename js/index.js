@@ -58,10 +58,6 @@ $(document).ready(function () {
   $('.overlay').click(function (event) {
     $('.overlay').removeClass('overlay-active');
   });
-  $('.events__all').click(function (event) {
-    $('.events__item-hidden').toggleClass('events__item-active');
-    $('.events__item-hidden800').toggleClass('events__item-active');
-  });
 });
 
 
@@ -250,6 +246,35 @@ document.querySelector('.events__all').addEventListener('click', (e) => {
 });
 
 // Издания
+// const slider = document.querySelector('.publications-right');
+
+// let mySwiper2;
+
+// function mobileSlider1() {
+//   if (window.innerWidth <= 650 && slider.dataset.mobile == 'true') {
+//     mySwiper2 = new Swiper(slider, {
+//       pagination: {
+//         el: '.swiper-pagination',
+//         clickable: true,
+//       },
+//       slidesPerView: 1,
+//       slidesPerGroup: 1,
+//       slidesPerColumn: 1,
+//       spaceBetween: 60,
+//     });
+
+//     slider.dataset.mobile = 'false';
+//   }
+
+//   if (window.innerWidth > 650) {
+//     slider.dataset.mobile = 'true';
+
+//     if (slider.classList.contains('swiper-container-initialized')) {
+//       mySwiper1.destroy();
+//     }
+//   }
+// }
+
 
 var mySwiper = new Swiper('.publications-right', {
   preloadImages: true,
@@ -268,10 +293,31 @@ var mySwiper = new Swiper('.publications-right', {
   },
   watchOverflow: true,
 
-  slidesPerView: 3.05,
-  slidesPerGroup: 2,
-  spaceBetween: 50,
+  breakpoints: {
+    1100: {
+      slidesPerView: 3.05,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+    883: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 50,
+    },
+    600: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 48,
+    },
+    // 320: {
+    //   slidesPerView: 1,
+    //   slidesPerGroup: 1,
+    //   spaceBetween: 0,
+    // },
+  },
 });
+
+
 
 
 
