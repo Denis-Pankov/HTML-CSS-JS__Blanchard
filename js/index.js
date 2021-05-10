@@ -222,7 +222,7 @@ function mobileSlider() {
       slidesPerView: 1,
       slidesPerGroup: 1,
       slidesPerColumn: 1,
-      spaceBetween: 50,
+      spaceBetween: 60,
     });
 
     slider.dataset.mobile = 'true';
@@ -268,8 +268,8 @@ var mySwiper = new Swiper('.publications-right', {
   },
   watchOverflow: true,
 
-  slidesPerView: 3,
-  slidesPerGroup: 3,
+  slidesPerView: 3.05,
+  slidesPerGroup: 2,
   spaceBetween: 50,
 });
 
