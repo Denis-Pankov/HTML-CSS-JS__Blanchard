@@ -82,6 +82,7 @@
 .events-item__content {
   padding: 1px 45px 0px 50px;
   margin-bottom: auto;
+  padding-bottom: 25px;
   line-height: 32px;
 }
 
