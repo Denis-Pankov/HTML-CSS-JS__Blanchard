@@ -9,7 +9,7 @@
 .publications-container {
   display: flex;
   justify-content: space-between;
-  padding: 81px 0 77px 14px;
+  padding: 81px 0 77px 12px;
   color: #fff;
 }
 
@@ -174,9 +174,9 @@ label {
   border: 1px solid var(--focusA4);
 }
 
-/* .check:checked + .checkbox-selected:before .publication-left__checkbox-label {
+.check:checked + .checkbox-selected:before .publication-left__checkbox-label {
   color: yellow;
-} */
+}
 
 
 /* RIGHT */
