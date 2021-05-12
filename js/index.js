@@ -1,3 +1,7 @@
+document.onkeydown = function(e){
+  if (e.keyCode == 32) e.preventDefault();
+};
+
 // Dropdown-Header
 document.addEventListener('DOMContentLoaded', function () {
 
