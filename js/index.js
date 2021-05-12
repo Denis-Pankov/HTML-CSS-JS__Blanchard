@@ -310,6 +310,12 @@ window.addEventListener('resize', () => {
   desktopSlider();
 });
 
+$(document).ready(function () {
+  $('.publication-left__heading-top').click(function (event) {
+    $('.publication-left__checkbox-label').toggleClass('active');
+  });    
+});
+
 
 
 
