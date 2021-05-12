@@ -233,7 +233,6 @@ function mobileSlider() {
   }
 }
 
-
 mobileSlider();
 
 window.addEventListener('resize', () => {
@@ -241,81 +240,73 @@ window.addEventListener('resize', () => {
 });
 
 document.querySelector('.events__all').addEventListener('click', (e) => {
-  document.querySelectorAll('.events__item').forEach(el => {el.classList.add('events__item-active')});
+  document.querySelectorAll('.events__item').forEach(el => { el.classList.add('events__item-active') });
   e.currentTarget.style.display = 'none';
 });
 
 // Издания
-// const slider = document.querySelector('.publications-right');
 
-// let mySwiper2;
+const slider2 = document.querySelector('.publications-right');
 
-// function mobileSlider1() {
-//   if (window.innerWidth <= 650 && slider.dataset.mobile == 'true') {
-//     mySwiper2 = new Swiper(slider, {
-//       pagination: {
-//         el: '.swiper-pagination',
-//         clickable: true,
-//       },
-//       slidesPerView: 1,
-//       slidesPerGroup: 1,
-//       slidesPerColumn: 1,
-//       spaceBetween: 60,
-//     });
+let mySwiper2;
 
-//     slider.dataset.mobile = 'false';
-//   }
+function desktopSlider() {
+  if (window.innerWidth >= 650 && slider2.dataset.desktop == 'false') {
+    mySwiper2 = new Swiper(slider2, {
+      preloadImages: true,
+      navigation: {
+        prevEl: '.swiper-button-prev',
+        nextEl: '.swiper-button-next',
+      },
+      pagination: {
+        el: '.swiper-pagination',
+        type: 'fraction',
+      },
+      keyboard: {
+        enable: true,
+        onlyInViewport: true,
+        pageUpDown: false,
+      },
+      watchOverflow: true,
 
-//   if (window.innerWidth > 650) {
-//     slider.dataset.mobile = 'true';
+      breakpoints: {
+        1100: {
+          slidesPerView: 3.05,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        883: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 50,
+        },
+        600: {
+          slidesPerView: 2,
+          slidesPerGroup: 2,
+          spaceBetween: 48,
+        },
+      },
+    });
 
-//     if (slider.classList.contains('swiper-container-initialized')) {
-//       mySwiper1.destroy();
-//     }
-//   }
-// }
+    slider2.dataset.desktop = 'true';
+  }
 
+  if (window.innerWidth < 650) {
+    slider2.dataset.desktop = 'false';
 
-var mySwiper = new Swiper('.publications-right', {
-  preloadImages: true,
-  navigation: {
-    prevEl: '.swiper-button-prev',
-    nextEl: '.swiper-button-next',
-  },
-  pagination: {
-    el: '.swiper-pagination',
-    type: 'fraction',
-  },
-  keyboard: {
-    enable: true,
-    onlyInViewport: true,
-    pageUpDown: false,
-  },
-  watchOverflow: true,
+    if (slider2.classList.contains('swiper-container-initialized')) {
+      mySwiper2.destroy();
+    }
+  }
+}
 
-  breakpoints: {
-    1100: {
-      slidesPerView: 3.05,
-      slidesPerGroup: 2,
-      spaceBetween: 50,
-    },
-    883: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 50,
-    },
-    600: {
-      slidesPerView: 2,
-      slidesPerGroup: 2,
-      spaceBetween: 48,
-    },
-    // 320: {
-    //   slidesPerView: 1,
-    //   slidesPerGroup: 1,
-    //   spaceBetween: 0,
-    // },
-  },
+desktopSlider();
+
+window.addEventListener('resize', () => {
+  desktopSlider();
 });
+
+
 
 
 
