@@ -313,7 +313,25 @@ window.addEventListener('resize', () => {
 $(document).ready(function () {
   $('.publication-left__heading-top').click(function (event) {
     $('.publication-left__checkbox-label').toggleClass('active');
-  });    
+  }); 
+  // $('.publication-left__heading-top').click(function (event) {
+  //   $('.publication-left__checkbox-label').toggleClass('active');
+  // });    
+});
+
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.publication-left__checkbox-label').forEach(function (checkBtn) {
+    checkBtn.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
+
+      // document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
+      //   workStep.classList.remove('catalog-flag__btn-active');
+      // });
+      document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.add('publication-left__checkbox-label-active');
+      
+    });
+  });
+
 });
 
 
