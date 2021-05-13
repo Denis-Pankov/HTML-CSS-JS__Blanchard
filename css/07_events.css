@@ -191,7 +191,7 @@
 
 /* SLIDER */
 
-@media (max-width: 700px) {
+@media (max-width: 699px) {
   .events__list {
     width: 100%;
     padding-left: 0;

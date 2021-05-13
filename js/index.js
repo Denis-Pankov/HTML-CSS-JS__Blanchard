@@ -310,34 +310,48 @@ window.addEventListener('resize', () => {
   desktopSlider();
 });
 
+
+
 $(document).ready(function () {
   $('.publication-left__heading-top').click(function (event) {
-    $('.publication-left__checkbox-label').toggleClass('active');
+    $('.publication-left__checkbox-label').toggleClass('publication-left__checkbox-label-block');
+    $('.publication-left__arrow').toggleClass('publication-left__arrow-active');
+    $('.publication-left__close').toggleClass('publication-left__close-block');
   }); 
-  // $('.publication-left__heading-top').click(function (event) {
-  //   $('.publication-left__checkbox-label').toggleClass('active');
+
+  // Убирает все фильтра по нажатию крестика
+  // $('.publication-left__close').click(function (event) {
+  //   $('.publication-left__checkbox-label').removeClass('publication-left__checkbox-label-active');
+  //   $('.publication-left__close').removeClass('publication-left__close-active');
   // });    
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  document.querySelectorAll('.publication-left__checkbox-label').forEach(function (checkBtn) {
-    checkBtn.addEventListener('click', function (event) {
+  document.querySelectorAll('.publication-left__checkbox-label').forEach(function (check) {
+    check.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path
-
-      // document.querySelectorAll('.catalog-flag__btn').forEach(function (workStep) {
-      //   workStep.classList.remove('catalog-flag__btn-active');
-      // });
-      document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.add('publication-left__checkbox-label-active');
       
+      document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.add('publication-left__checkbox-label-active');
+      document.querySelector(`.publication-left__close[data-path="${path}"]`).classList.toggle('publication-left__close-active');
+ 
     });
   });
 
 });
 
 
+document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.publication-left__close').forEach(function (checkClose) {
+    checkClose.addEventListener('click', function (event) {
+      const path = event.currentTarget.dataset.path
+      
+      document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.remove('publication-left__checkbox-label-active');
+      document.querySelector(`.publication-left__close[data-path="${path}"]`).classList.remove('publication-left__close-active');
+ 
+    });
+  });
 
-
-
+});
 
 
 
