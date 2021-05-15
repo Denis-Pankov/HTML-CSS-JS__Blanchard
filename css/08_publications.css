@@ -109,6 +109,10 @@
   background-color: rgba(157, 92, 208, 0.5);
 }
 
+.left-price__input:focus {
+  outline: 2px solid var(--activeD0);
+}
+
 .left-price__input::placeholder {
   color: #fff;
 }
@@ -129,7 +133,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .check {
   position: absolute;
-  width: 250px;
+  width: 200px;
   height: 30px;
   opacity: 0;
 }
