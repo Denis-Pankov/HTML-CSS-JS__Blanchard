@@ -1,0 +1,240 @@
+.projects__container {
+  margin-bottom: 80px;
+}
+
+.projects__item {
+  padding-left: 2px;
+  margin-bottom: 18px;
+  max-width: 1080px;
+  line-height: 32px;
+}
+
+.projects__link:link {
+  border: 2px solid transparent;
+  outline: none;
+  color: var(--activeD0);
+  font-weight: 600;
+}
+
+.projects__link:focus {
+  border: 2px solid var(--focusA4);
+  outline: none;
+}
+
+.projects__link:hover {
+  border: 2px solid transparent;
+  border-bottom: 1px solid var(--activeD0);
+  outline: none;
+}
+
+.projects__link:active {
+  border: 2px solid transparent;
+  border-bottom: 1px solid var(--focusA4);
+  outline: none;
+  color: var(--focusA4);
+}
+
+/* Tooltip */
+
+.projects__marker {
+  position: relative;
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #bcbcbc;
+  line-height: 17px;
+  color: white;
+  cursor: pointer;
+}
+
+.projects__marker:focus {
+  outline: none;
+}
+
+.projects__marker:hover, .projects__marker:focus {
+  background: var(--activeD0);
+}
+
+.projects__marker:hover .projects__popup, .projects__marker:focus .projects__popup {
+  display: block;
+}
+
+.projects__popup {
+  bottom: 27px;
+  left: 7px;
+  display: none;
+  position: absolute;
+  padding: 7px 10px 8px 10px;
+  width: 264px;
+  background-color: #cacaca;
+  transform: translate(-50%);
+  z-index: 200;
+  font-size: 0.75em;
+  font-weight: 600;
+  line-height: 16px;
+  transform-style: preserve-3d;
+  animation: show .5s;
+}
+
+.projects__popup:after {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  left: 50%;
+  bottom: -8px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) translateX(-50%);
+  background-color: #cacaca;
+  z-index: 400;
+}
+
+.projects__popup:before {
+  position: absolute;
+  display: block;
+  left: 50%;
+  bottom: -8px;
+  content: '';
+  width: 10px;
+  height: 10px;
+  transform-origin: 50% 50%;
+  transform: rotate(45deg) translateX(-50%) translateZ(-1px);
+  background-color: black;
+  z-index: -1;
+  animation: show 3s;
+}
+
+/* Слайдер */
+
+.projects__title {
+  margin-bottom: 23px;
+  font-size: 24px;
+  font-weight: 600;
+  line-height: 32px;
+}
+
+.projects-swiper {
+  position: relative;
+  width: 91.5%;
+  min-width: 0;
+}
+
+
+.partner__wrapper {
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+
+.partner__slide {
+  /* display: block; */
+  display: flex;
+  align-items: center;
+  justify-content: center;  
+  max-width: 450px;
+  /* max-width: 100%; */
+  height: 150px;
+  border: 1px solid #cacaca;
+}
+
+.partner__img img {
+  min-height: 63px;
+  /* max-width: 100%; */
+  filter: grayscale(100%);
+  transition: filter 200ms;
+}
+
+.partner__img::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+.partner__img:hover img {
+  min-height: 63px;
+  filter: grayscale(0%);
+}
+
+.project__slider {
+  position: relative;
+}
+
+.partner-ctrl-prev, .partner-ctrl-next {
+  top: 38.0%;
+  display: inline-block;
+  position: absolute;
+  vertical-align: center;
+  width: 34px;
+  height: 34px;
+  border-radius: 50%;
+  background-color: #ECECEC;
+  border: 2px solid #fff;
+}
+
+.partner-ctrl-prev:focus, .partner-ctrl-next:focus {
+  border: 2px solid var(--focusA4);
+  outline: none;
+}
+
+.partner-ctrl-prev:hover, .partner-ctrl-next:hover {
+  background-color: var(--activeD0);
+}
+
+.partner-ctrl-prev:active, .partner-ctrl-next:active {
+  background-color: var(--focusA4);
+  border: 2px solid #d1a9f0;
+}
+
+.partner-ctrl-prev:before, .partner-ctrl-next:before {
+  position: absolute;
+  content: '';
+  top: 11px;
+  width: 8px;
+  height: 8px;
+  border: 1px solid #000;
+  transform: rotate(45deg);
+}
+
+.partner-ctrl-prev:hover:before, .partner-ctrl-next:hover:before, .partner-ctrl-prev:active:before, .partner-ctrl-next:active:before {
+  border: 1px solid #fff;
+}
+
+.partner-ctrl-prev {
+  left: 3px;
+}
+
+.partner-ctrl-prev:before {
+  left: 12px;
+  border-top: none;
+  border-right: none;
+}
+
+.partner-ctrl-prev:hover:before, .partner-ctrl-prev:active:before {
+  border-top: none;
+  border-right: none;
+}
+
+.partner-ctrl-next {
+  right: 7px;
+}
+
+.partner-ctrl-next:before {
+  left: 10px;
+  border-left: none;
+  border-bottom: none;
+}
+
+.partner-ctrl-next:hover:before, .partner-ctrl-next:active:before {
+  border-left: none;
+  border-bottom: none;
+}

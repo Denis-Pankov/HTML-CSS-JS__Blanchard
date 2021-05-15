@@ -317,13 +317,7 @@ $(document).ready(function () {
     $('.publication-left__checkbox-label').toggleClass('publication-left__checkbox-label-block');
     $('.publication-left__arrow').toggleClass('publication-left__arrow-active');
     $('.publication-left__close').toggleClass('publication-left__close-block');
-  }); 
-
-  // Убирает все фильтра по нажатию крестика
-  // $('.publication-left__close').click(function (event) {
-  //   $('.publication-left__checkbox-label').removeClass('publication-left__checkbox-label-active');
-  //   $('.publication-left__close').removeClass('publication-left__close-active');
-  // });    
+  });     
 });
 
 document.addEventListener('DOMContentLoaded', function () {
@@ -353,7 +347,39 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+// Проекты
 
+var mySwiper3 = new Swiper('.projects-swiper', {
+  preloadImages: true,
+  navigation: {
+    prevEl: '.partner-ctrl-prev',
+    nextEl: '.partner-ctrl-next',
+  },
+  keyboard: {
+    enable: true,
+    onlyInViewport: true,
+    pageUpDown: false,
+  },
+  watchOverflow: true,
+
+  breakpoints: {
+    1025: {
+      slidesPerView: 3,
+      slidesPerGroup: 3,
+      spaceBetween: 50,
+    },
+    500: {
+      slidesPerView: 2,
+      slidesPerGroup: 2,
+      spaceBetween: 32,
+    },
+    320: {
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      spaceBetween: 0,
+    },
+  },
+});
 
 
 
