@@ -275,9 +275,9 @@ function desktopSlider() {
 
       breakpoints: {
         1100: {
-          slidesPerView: 3.05,
+          slidesPerView: 3,
           slidesPerGroup: 2,
-          spaceBetween: 50,
+          spaceBetween: 52,
         },
         883: {
           slidesPerView: 2,
@@ -333,6 +333,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
+let uncheck = document.querySelectorAll('.publication-left__close');
+
+uncheck.forEach(function(button) {
+  button.addEventListener('click', function() {
+    let cch = this.closest('.checkbox-item').querySelectorAll('.check');
+    cch.forEach( cb => cb.checked = false );
+  });
+});
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.publication-left__close').forEach(function (checkClose) {
