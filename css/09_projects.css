@@ -3,7 +3,7 @@
 }
 
 .projects__item {
-  padding-left: 2px;
+  padding-left: 4px;
   margin-bottom: 18px;
   max-width: 1080px;
   line-height: 32px;
@@ -14,6 +14,7 @@
   outline: none;
   color: var(--activeD0);
   font-weight: 600;
+  transition: border-color 200ms, color 200ms;
 }
 
 .projects__link:focus {
@@ -174,6 +175,7 @@
   border-radius: 50%;
   background-color: #ECECEC;
   border: 2px solid #fff;
+  transition: border-color 200ms, background-color 200ms;
 }
 
 .partner-ctrl-prev:focus, .partner-ctrl-next:focus {
@@ -198,6 +200,7 @@
   height: 8px;
   border: 1px solid #000;
   transform: rotate(45deg);
+  transition: border-color 200ms;
 }
 
 .partner-ctrl-prev:hover:before, .partner-ctrl-next:hover:before, .partner-ctrl-prev:active:before, .partner-ctrl-next:active:before {
