@@ -25,12 +25,15 @@
   <link rel="stylesheet" href="css/07_events.css">
   <link rel="stylesheet" href="css/08_publications.css">
   <link rel="stylesheet" href="css/09_projects.css">
+  <link rel="stylesheet" href="css/10_contacts.css">
+  <link rel="stylesheet" href="css/11_footer.css">
   <script defer src="assets/simplebar.min.js"></script>
   <script defer src="assets/jquery-3.6.0.slim.min.js"></script>
   <script defer src="assets/swiper-bundle.min.js"></script>
   <script defer src="assets/choices.min.js"></script>
   <script defer src="assets/jquery-1.12.4.js"></script>
   <script defer src="assets/jquery-ui.js"></script>
+  <script defer src="https://api-maps.yandex.ru/2.1/?apikey=9a194194-1b8b-4f2e-b052-eb39e52b2f30&lang=ru_RU"></script>
   <script defer src="js/index.js"></script>
 </head>
 
@@ -8002,151 +8005,129 @@
       <h2 class="reset-title container-heading projects__heading">
         Проекты
       </h2>
-      <p class="reset-title projects__item">
-        Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно
-        фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не
-        уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности.
-        Прежде всего, постоянное информационно-пропагандистское
-        <span class="projects__marker" tabindex="0">i
-          <span class="projects__popup">
-            Пример современных тенденций - современная методология разработки
-          </span>
-        </span>
-        обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых
-        решений. И нет сомнений, что действия
-        представителей оппозиции могут быть рассмотрены
-        <span class="projects__marker" tabindex="0">i
-          <span class="projects__popup">
-            Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции
-          </span>
-        </span>
-        исключительно в разрезе маркетинговых и финансовых
-        <span class="projects__marker" tabindex="0">i
-          <span class="projects__popup">
-            В стремлении повысить качество
-          </span>
-        </span>
-        предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов
-        призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до
-        степени совершенной неузнаваемости. Подробнее:
-        <a href="http://blanchard-art.ru/projects/about" class="projects__link">
-          blanchard-art.ru/projects/about
-        </a>
+      <p class="reset-title projects__item">Предварительные выводы: постоянное информационно-пропагандистское обеспечение нашей деятельности однозначно фиксирует необходимость своевременного выполнения сверхзадачи. А ещё независимые государства смешаны с не уникальными данными до степени совершенной неузнаваемости, из-за чего возрастает их статус бесполезности. Прежде всего, постоянное 
+        информационно-пропагандистское <span class="projects__marker" tabindex="0">i<span class="projects__popup">Пример современных тенденций - современная методология разработки</span></span> обеспечение нашей деятельности однозначно фиксирует необходимость экономической целесообразности принимаемых решений. И нет сомнений, что действия представителей оппозиции могут быть рассмотрены <span class="projects__marker" tabindex="0">i<span class="projects__popup">Приятно, граждане, наблюдать, как сделанные на базе аналитики выводы вызывают у вас эмоции</span></span> исключительно в разрезе маркетинговых и финансовых <span class="projects__marker" tabindex="0">i<span class="projects__popup">В стремлении повысить качество</span></span> предпосылок. Банальные, но неопровержимые выводы, а также представители современных социальных резервов призывают нас к новым свершениям, которые, в свою очередь, должны быть смешаны с не уникальными данными до степени совершенной неузнаваемости. Подробнее:<a href="http://blanchard-art.ru/projects/about" class="projects__link">blanchard-art.ru/projects/about</a>
       </p>
 
       <h3 class="reset-title projects__title">Партнёры проектов:</h3>
-      
+
       <div class="project__slider">
-      <div class="projects-swiper swiper-container">
-        
-        <ul class="partner__wrapper swiper-wrapper">
+        <div class="projects-swiper swiper-container">
 
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr01.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr02.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr03.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr04.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr05.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr06.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr07.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr08.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
-          <li class="partner__slide swiper-slide">
-            <div class="partner__img">
-              <img src="img/Projects/Pr09.png" alt="Логотип компании-партнера">
-            </div>
-          </li>
+          <ul class="partner__wrapper swiper-wrapper">
 
-        </ul>
-        
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr01.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr02.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr03.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr04.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr05.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr06.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr07.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr08.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+            <li class="partner__slide swiper-slide">
+              <div class="partner__img">
+                <img src="img/Projects/Pr09.png" alt="Логотип компании-партнера">
+              </div>
+            </li>
+
+          </ul>
+
+        </div>
+        <div class="partner-ctrl-prev"></div>
+        <div class="partner-ctrl-next"></div>
       </div>
-      <div class="partner-ctrl-prev"></div>
-      <div class="partner-ctrl-next"></div>
-      </div>
-      
+
     </section>
 
     <section class="container contacts__container" id="contacts">
-      <h2 class="reset-title container-heading">
+      <h2 class="reset-title container-heading contacts-heading">
         Контакты
       </h2>
-      <div class="contacts__container__left">
-        <h3 class="reset-title contacts__container__left__heading">
-          Шоурум №4
-        </h3>
-        <p class="reset-title contacts__container__left__address">
-          Шоурум №4 Леонтьевский переулок, дом 5, строение 1
-        </p>
-        <h3 class="reset-title contacts__container__left__call__heading">Заказать обратный звонок</h3>
-        <form class="contacts__container__left__call__form">
-          <input type="text" placeholder="Имя*">
-          <input type="text" placeholder="Телефон*">
-          <button type="submit" class="contacts__container__left__call__btn">Заказать</button>
-        </form>
-        <h3 class="reset-title contacts__container__left__social__heading">
-          Связаться в один клик
-        </h3>
-        <ul class="contacts__container__left__social__list">
-          <li class="contacts__container__left__social__item">
-            <a href="" class="contacts__container__left__social__link contacts__container__left__social__whatsapp"></a>
-          </li>
-          <li class="contacts__container__left__social__item">
-            <a href="" class="contacts__container__left__social__link contacts__container__left__social__telegram"></a>
-          </li>
-        </ul>
+      <div class="contacts-content">
+        <div class="contacts__container-left">
+          <h3 class="reset-title contacts-left__title">
+            Шоурум №4
+          </h3>
+          <p class="reset-title contacts-left__address">
+            Леонтьевский переулок, дом 5, строение 1
+          </p>
+          <h3 class="reset-title contacts-left__subtitle contacts-left__call-heading">Заказать обратный звонок</h3>
+          <form class="contacts-left__call-form">
+            <input class="call-form__input" type="text" placeholder="Имя*">
+            <input class="call-form__input" type="number" placeholder="Телефон*">
+            <button class="call-form__btn" type="submit">Заказать</button>
+          </form>
+          <h3 class="reset-title contacts-left__subtitle contacts-left__social-heading">
+            Связаться в один клик
+          </h3>
+          <ul class="contacts-left__social-list">
+            <li class="contacts-left__social-item contacts-left__icon-whatsapp">
+              <a href="#" class="contacts-left__social-link contacts-left__social-whatsapp"></a>
+            </li>
+            <li class="contacts-left__social-item contacts-left__icon-telegram">
+              <a href="#" class="contacts-left__social-link contacts-left__social-telegram"></a>
+            </li>
+          </ul>
+        </div>
+        <div class="contacts-right__map" id="map1"></div>
       </div>
-      <div class="contacts__container__right__map">MAP</div>
     </section>
 
   </main>
 
   <div class="overlay"></div>
 
-  <footer style="display: none;" class="footer">
-    <img src="." alt="Логотип__Blanchard" class="header-top__logo">
-    <div class="footer__social">
-      <ul class="footer__social__list">
-        <li class="footer__social__item">
-          <a href="" class="footer__social__link footer__social__vk"></a>
-        </li>
-        <li class="footer__social__item">
-          <a href="" class="footer__social__link footer__social__instagram"></a>
-        </li>
-        <li class="footer__social__item">
-          <a href="" class="footer__social__link footer__social__facebook"></a>
-        </li>
-      </ul>
-    </div>
+  <footer class="footer">
+    <ul class="container footer-container">
+      <li class="footer__item footer__logo">
+        <img src="img/Hero/Лого.png" alt="Логотип__Blanchard" class="header-top__logo">
+      </li>
+      <li class="footer__item footer__social">
+        <ul class="footer__social-list">
+          <li class="footer__social-item social__icon-vk">
+            <a href="#" class="footer__social-link footer__social-vk"></a>
+          </li>
+          <li class="footer__social-item social__icon-instagram">
+            <a href="#" class="footer__social-link footer__social-instagram"></a>
+          </li>
+          <li class="footer__social-item social__icon-facebook">
+            <a href="#" class="footer__social-link footer__social-facebook"></a>
+          </li>
+        </ul>
+      </li>
+    </ul>
   </footer>
 
 </body>

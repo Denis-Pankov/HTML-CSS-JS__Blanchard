@@ -1,11 +1,15 @@
 .projects__container {
-  margin-bottom: 80px;
+  margin-bottom: 82px;
+}
+.projects__heading {
+  margin-bottom: 15px;
 }
 
 .projects__item {
-  padding-left: 4px;
+  padding-left: 3px;
   margin-bottom: 18px;
   max-width: 1080px;
+  white-space: pre-line;
   line-height: 32px;
 }
 

@@ -70,11 +70,9 @@
 }
 
 .publication-left__heading {
+  font-size: 16px;
   font-weight: 700;
-}
-
-.publication-left__checkbox-label {
-  display: block;
+  line-height: 32px;
 }
 
 .publication-left__heading-price {
@@ -126,6 +124,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 /* Чекбокс */
 
 .publication-left__checkbox-label {
+  display: inline-block;
   position: relative;
   cursor: pointer;
   transition: color 200ms;
@@ -167,6 +166,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .publication-left__checkbox-label:hover .checkbox-selected {
   color: var(--hoverF3);
+  transition: color 200ms;
 }
 
 .publication-left__checkbox-label:active .checkbox-selected:before {
@@ -175,6 +175,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 .publication-left__checkbox-label:active .checkbox-selected {
   color: var(--focusA4);
+  transition: color 200ms
 }
 
 .publication-left__checkbox-label:focus {
@@ -207,7 +208,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
   background-color: var(--hoverF3);
   border-radius: 50%;
   opacity: 0;
-  transition: opacity .3s ease-in-out;
+  transition: opacity .3s ease-in-out, background-color 200ms;
 }
 
 @media (max-width: 699px) {

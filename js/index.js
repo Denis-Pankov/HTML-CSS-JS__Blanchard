@@ -389,6 +389,24 @@ var mySwiper3 = new Swiper('.projects-swiper', {
   },
 });
 
+// MAP
+ymaps.ready(init);
+    function init(){
+        var myMap = new ymaps.Map("map1", {
+            center: [55.7622,37.6463],
+            zoom: 14.4,
+            controls: []
+        });
+        var myPlacemark = new ymaps.Placemark([55.75846806898367,37.60108849999989], {}, {
+          iconLayout: 'default#image', 
+          iconImageHref: 'img/Contacts/marker.svg', 
+          iconImageSize: [20, 20], 
+          iconImageOffset: [-3, -42]       
+      });
+
+      myMap.geoObjects.add(myPlacemark);
+    }
+
 
 
 
