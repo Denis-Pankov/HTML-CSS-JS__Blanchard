@@ -2,14 +2,20 @@
   filter: grayscale(1);
 }
 
-.contacts-content {
+.contacts-content {  
   display: flex;
 }
 
+.contacts-heading {
+  padding-left: calc((100% - 1610px) / 2);
+}
+
 .contacts__container-left {
+  box-sizing: content-box;
   width: 35.3%;
-  /* padding: 121px 122px 124px 149px; */
+  max-width: 400px;
   padding: 121px 122px 124px 0;
+  padding-left: calc((100% - 1610px) / 2);
   border: 1px solid #cacaca;
 }
 
@@ -37,6 +43,7 @@
 
 .call-form__input {
   display: block;
+  box-sizing: border-box;
   width: 100%;
   margin-bottom: 23px;
   padding: 8px 24px;
@@ -93,8 +100,6 @@
 }
 
 .contacts-right__map {
-  /* position: absolute; */
-  /* right: -170px; */
   width: 64.7%;
-  max-height: 700px;
+  height: 700px;
 }
