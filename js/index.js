@@ -315,7 +315,7 @@ window.addEventListener('resize', () => {
 $(document).ready(function () {
   $('.publication-left__heading-top').click(function (event) {
     $('.publication-left__checkbox-label').toggleClass('publication-left__checkbox-label-block');
-    $('.publication-left__arrow').toggleClass('publication-left__arrow-active');
+    $('.publication-left__heading-top').toggleClass('publication-left__heading-top-active');
     $('.publication-left__close').toggleClass('publication-left__close-block');
   });     
 });
@@ -376,7 +376,7 @@ var mySwiper3 = new Swiper('.projects-swiper', {
       slidesPerGroup: 3,
       spaceBetween: 50,
     },
-    500: {
+    650: {
       slidesPerView: 2,
       slidesPerGroup: 2,
       spaceBetween: 32,
@@ -384,7 +384,7 @@ var mySwiper3 = new Swiper('.projects-swiper', {
     320: {
       slidesPerView: 1,
       slidesPerGroup: 1,
-      spaceBetween: 0,
+      spaceBetween: 5,
     },
   },
 });
