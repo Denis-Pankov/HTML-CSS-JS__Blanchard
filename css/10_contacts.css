@@ -6,6 +6,13 @@
   display: flex;
 }
 
+@media(max-width:649px) {
+  .contacts-content {
+    position: relative;
+    display: block;
+  }
+}
+
 .contacts-heading {
   padding-left: calc((100% - 1610px) / 2);
 }
@@ -25,6 +32,24 @@
 @media (max-width:1200px) {
   .contacts-heading {
     padding-left: 50px;
+  }
+}
+
+@media (max-width:649px) {
+  .contacts-heading {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width:576px) {
+  .contacts-heading {
+    padding-left: 30px;
+  }
+}
+
+@media (max-width:400px) {
+  .contacts-heading {
+    padding-left: 18px;
   }
 }
 
@@ -58,7 +83,29 @@
 
 @media (max-width:768px) {
   .contacts__container-left {
-    width: 56%;
+    width: 50%;
+  }
+}
+
+@media (max-width:649px) {
+  .contacts__container-left {
+    box-sizing: border-box;
+    width: 100%;
+    max-width: 100%;
+    padding: 3px 50px 30px 50px;
+    border: none;
+  }
+}
+
+@media (max-width:576px) {
+  .contacts__container-left {
+    padding: 3px 30px 30px 30px;
+  }
+}
+
+@media (max-width:400px) {
+  .contacts__container-left {
+    padding: 3px 18px 30px 18px;
   }
 }
 
@@ -72,6 +119,12 @@
 .contacts-left__address {
   margin-bottom: 28px;
   line-height: 32px;
+}
+
+@media (max-width:649px) {
+  .contacts-left__address {
+    margin-bottom: 340px;
+  }
 }
 
 .contacts-left__subtitle {
@@ -92,6 +145,7 @@
   padding: 8px 24px;
   border: 1px solid #333333;
   border-radius: 100px;
+  transition: border-color 200ms;
 }
 
 .call-form__input:focus {
@@ -113,6 +167,7 @@
   font-size: 18px;
   font-weight: 700;
   background-color: transparent;
+  transition: background-color 200ms, color 200ms, border-color 200ms;
 }
 
 .call-form__btn:hover {
@@ -189,6 +244,37 @@
   border: 2px solid var(--hoverF3);
   border-radius: 100px;
   cursor: pointer;
+  transition: border color 200ms;
+}
+
+.contacts-left__social-link:hover:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--activeD0);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: border color 200ms;
+}
+
+.contacts-left__social-link:active:before {
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--focusA4);
+  border-radius: 100px;
+  cursor: pointer;
+  transition: border color 200ms;
 }
 
 .contacts-right__map {
@@ -199,5 +285,15 @@
 @media (max-width:768px) {
   .contacts-right__map {
     width: 44%;
+  }
+}
+
+@media (max-width:649px) {
+  .contacts-right__map {
+    position: absolute;
+    top: 78px;
+    left: 0;
+    width: 100%;
+    height: 320px;
   }
 }
