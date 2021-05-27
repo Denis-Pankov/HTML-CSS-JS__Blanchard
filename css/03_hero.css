@@ -195,6 +195,11 @@
   background-size: cover;
 }
 
+.hero__image.lazy {
+  background-image: none;
+  background-color: transparent;
+}
+
 .hero__wrapper .swiper-slide-active {
   animation: scale 30s infinite;
 }

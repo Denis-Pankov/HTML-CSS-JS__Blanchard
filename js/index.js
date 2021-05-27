@@ -1,4 +1,4 @@
-document.onkeydown = function(e){
+document.onkeydown = function (e) {
   if (e.keyCode == 32) e.preventDefault();
 };
 
@@ -81,7 +81,13 @@ const choices = new Choices(element, {
 });
 
 var mySwiper = new Swiper('.gallery-right__swiper', {
-  preloadImages: true,
+  preloadImages: false,
+  lazy: {
+    loadOnTransitionStart: true,
+    loadPrevNext: false,
+  },
+  watchSlidesProgress: true,
+  watchSlidesVisibility: true,
   navigation: {
     prevEl: '.swiper-button-prev',
     nextEl: '.swiper-button-next',
@@ -209,7 +215,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
 $('.accordion__item-btn').click(() => {
   $('html, body').animate({
-      scrollTop: $('.info-content-active').offset().top
+    scrollTop: $('.info-content-active').offset().top
   }, 200);
 });
 
@@ -323,17 +329,17 @@ $(document).ready(function () {
     $('.publication-left__checkbox-label').toggleClass('publication-left__checkbox-label-block');
     $('.publication-left__heading-top').toggleClass('publication-left__heading-top-active');
     $('.publication-left__close').toggleClass('publication-left__close-block');
-  });     
+  });
 });
 
 document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.publication-left__checkbox-label').forEach(function (check) {
     check.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path
-      
+
       document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.add('publication-left__checkbox-label-active');
       document.querySelector(`.publication-left__close[data-path="${path}"]`).classList.toggle('publication-left__close-active');
- 
+
     });
   });
 
@@ -341,10 +347,10 @@ document.addEventListener('DOMContentLoaded', function () {
 
 let uncheck = document.querySelectorAll('.publication-left__close');
 
-uncheck.forEach(function(button) {
-  button.addEventListener('click', function() {
+uncheck.forEach(function (button) {
+  button.addEventListener('click', function () {
     let cch = this.closest('.checkbox-item').querySelectorAll('.check');
-    cch.forEach( cb => cb.checked = false );
+    cch.forEach(cb => cb.checked = false);
   });
 });
 
@@ -352,10 +358,10 @@ document.addEventListener('DOMContentLoaded', function () {
   document.querySelectorAll('.publication-left__close').forEach(function (checkClose) {
     checkClose.addEventListener('click', function (event) {
       const path = event.currentTarget.dataset.path
-      
+
       document.querySelector(`.publication-left__checkbox-label[data-path="${path}"]`).classList.remove('publication-left__checkbox-label-active');
       document.querySelector(`.publication-left__close[data-path="${path}"]`).classList.remove('publication-left__close-active');
- 
+
     });
   });
 
@@ -397,21 +403,104 @@ var mySwiper3 = new Swiper('.projects-swiper', {
 
 // MAP
 ymaps.ready(init);
-    function init(){
-        var myMap = new ymaps.Map("map1", {
-            center: [55.7622,37.6463],
-            zoom: 14.4,
-            controls: []
-        });
-        var myPlacemark = new ymaps.Placemark([55.75846806898367,37.60108849999989], {}, {
-          iconLayout: 'default#image', 
-          iconImageHref: 'img/Contacts/marker.svg', 
-          iconImageSize: [20, 20], 
-          iconImageOffset: [-3, -42]       
-      });
+function init() {
+  var myMap = new ymaps.Map("map1", {
+    center: [55.7622, 37.6463],
+    zoom: 14.4,
+    controls: []
+  });
+  var myPlacemark = new ymaps.Placemark([55.75846806898367, 37.60108849999989], {}, {
+    iconLayout: 'default#image',
+    iconImageHref: 'img/Contacts/marker.svg',
+    iconImageSize: [20, 20],
+    iconImageOffset: [-3, -42]
+  });
 
-      myMap.geoObjects.add(myPlacemark);
+  myMap.geoObjects.add(myPlacemark);
+}
+
+
+// Подгрузка изображений
+
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyloadImages;
+
+  if ("IntersectionObserver" in window) {
+    lazyloadImages = document.querySelectorAll(".lazy");
+    var imageObserver = new IntersectionObserver(function (entries, observer) {
+      entries.forEach(function (entry) {
+        if (entry.isIntersecting) {
+          var image = entry.target;
+          image.classList.remove("lazy");
+          imageObserver.unobserve(image);
+        }
+      });
+    });
+
+    lazyloadImages.forEach(function (image) {
+      imageObserver.observe(image);
+    });
+  } else {
+    var lazyloadThrottleTimeout;
+    lazyloadImages = document.querySelectorAll(".lazy");
+
+    function lazyload() {
+      if (lazyloadThrottleTimeout) {
+        clearTimeout(lazyloadThrottleTimeout);
+      }
+
+      lazyloadThrottleTimeout = setTimeout(function () {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function (img) {
+          if (img.offsetTop < (window.innerHeight + scrollTop)) {
+            img.src = img.dataset.src;
+            img.classList.remove('lazy');
+          }
+        });
+        if (lazyloadImages.length == 0) {
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+      }, 20);
     }
+
+    document.addEventListener("scroll", lazyload);
+    window.addEventListener("resize", lazyload);
+    window.addEventListener("orientationChange", lazyload);
+  }
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  var lazyloadImages = document.querySelectorAll("img.lazy");    
+  var lazyloadThrottleTimeout;
+  
+  function lazyload () {
+    if(lazyloadThrottleTimeout) {
+      clearTimeout(lazyloadThrottleTimeout);
+    }    
+    
+    lazyloadThrottleTimeout = setTimeout(function() {
+        var scrollTop = window.pageYOffset;
+        lazyloadImages.forEach(function(img) {
+            if(img.offsetTop < (window.innerHeight + scrollTop)) {
+              img.src = img.dataset.src;
+              img.classList.remove('lazy');
+            }
+        });
+        if(lazyloadImages.length == 0) { 
+          document.removeEventListener("scroll", lazyload);
+          window.removeEventListener("resize", lazyload);
+          window.removeEventListener("orientationChange", lazyload);
+        }
+    }, 20);
+  }
+  
+  document.addEventListener("scroll", lazyload);
+  window.addEventListener("resize", lazyload);
+  window.addEventListener("orientationChange", lazyload);
+});
+
 
 
 
