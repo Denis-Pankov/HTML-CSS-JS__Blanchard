@@ -18,7 +18,7 @@
   padding-left: calc((100% - 1610px) / 2);
 }
 
-@media (max-width:1630px) {
+/* @media (max-width:1630px) {
   .contacts-heading {
     padding-left: 10px;
   }
@@ -28,15 +28,15 @@
   .contacts-heading {
     padding-left: 100px;
   }
-}
+} */
 
-@media (max-width:1200px) {
+@media (max-width:1024px) {
   .contacts-heading {
-    padding-left: 50px;
+    padding: 0px 50px;
   }
 }
 
-@media (max-width:649px) {
+/* @media (max-width:649px) {
   .contacts-heading {
     padding-left: 50px;
   }
@@ -51,6 +51,12 @@
 @media (max-width:400px) {
   .contacts-heading {
     padding-left: 18px;
+  }
+} */
+
+@media (max-width:320px) {
+  .contacts-heading {
+    padding: 0px 15px;
   }
 }
 
