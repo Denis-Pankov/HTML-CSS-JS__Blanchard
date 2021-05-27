@@ -69,8 +69,20 @@ ul {
   margin: 0 auto;
 }
 
+@media (max-width:1024px) {
+  .container {
+    padding: 0px 50px;
+  }
+}
 
-@media (max-width:1560px) {
+@media (max-width:320px) {
+  .container {
+    padding: 0px 15px;
+  }
+}
+
+
+/* @media (max-width:1560px) {
   .container {
     padding: 0px 100px;
   }
@@ -80,9 +92,9 @@ ul {
   .container {
     padding: 0px 50px;
   }
-}
+} */
 
-@media (max-width:1024px) {
+/* @media (max-width:1024px) {
   .container {
     padding: 0px 50px;
   }
@@ -98,7 +110,7 @@ ul {
   .container {
     padding: 0px 15px;
   }
-}
+} */
 
 .container-heading {
   font-size: 48px;

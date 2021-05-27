@@ -207,6 +207,12 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
+$('.accordion__item-btn').click(() => {
+  $('html, body').animate({
+      scrollTop: $('.info-content-active').offset().top
+  }, 200);
+});
+
 // События
 const slider = document.querySelector('.events-container');
 
