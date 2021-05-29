@@ -191,9 +191,15 @@
   }
 }
 
-@media (max-width:340px) {
+@media (max-width:375px) {
   .gallery-right {
     padding-bottom: 150px;
+  }
+}
+
+@media (max-width:330px) {
+  .gallery-right {
+    padding-bottom: 170px;
   }
 }
 
@@ -205,15 +211,9 @@
   padding-top: 15px;
 }
 
-.galary__image-slide {
-  width: 350px;
-  height: 350px;
-}
-
 .gallery__image {
   position: relative;
 }
-
 
 .gallery__image:before {
   position: absolute;
