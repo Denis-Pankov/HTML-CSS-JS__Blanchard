@@ -83,8 +83,8 @@ const choices = new Choices(element, {
 var mySwiper = new Swiper('.gallery-right__swiper', {
   preloadImages: false,
   lazy: {
-    loadOnTransitionStart: true,
-    loadPrevNext: false,
+    loadOnTransitionStart: false,
+    loadPrevNext: true,
   },
   watchSlidesProgress: true,
   watchSlidesVisibility: true,

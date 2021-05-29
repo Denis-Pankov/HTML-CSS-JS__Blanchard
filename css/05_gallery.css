@@ -206,7 +206,8 @@
 }
 
 .galary__image-slide {
-  width: 100%;
+  width: 350px;
+  height: 350px;
 }
 
 .gallery__image {

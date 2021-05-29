@@ -161,8 +161,15 @@
 
 .partner__img img {
   min-height: 63px;
+  padding: 0px 45px;
   filter: grayscale(100%);
   transition: filter 200ms;
+}
+
+@media (max-width: 700px) {
+  .partner__img img {
+  min-height: 0;
+  }
 }
 
 .partner__img::before {
