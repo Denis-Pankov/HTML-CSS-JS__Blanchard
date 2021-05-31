@@ -27,13 +27,7 @@
   margin-right: 30px;
 }
 
-@media (max-width: 380px) {
-  .catalog-flag__item:not(:last-child) {
-    margin-right: 20px;
-  }
-}
-
-@media (max-width: 345px) {
+@media (max-width: 450px) {
   .catalog-flag__item:not(:last-child) {
     margin-right: 15px;
   }

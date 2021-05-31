@@ -1,7 +1,6 @@
 .events-container {
   margin-bottom: 75px;
   width: 100%;
-  padding-right: 18px;
   min-width: 0;
   overflow: hidden;
 }
@@ -14,8 +13,6 @@
 .events__list {
   display: flex;
   justify-content: space-between;
-  padding-left: 3px;
-  padding-right: 6px;
   width: 100%;
   min-width: 0;
   flex-wrap: wrap;
