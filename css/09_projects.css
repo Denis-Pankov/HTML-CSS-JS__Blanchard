@@ -247,7 +247,7 @@
   }
 }
 
-@media (max-width:320px){
+@media (max-width:400px){
   .partner-ctrl-prev {
     left: -39px;
   }
@@ -268,7 +268,7 @@
   }
 }
 
-@media (max-width:320px){
+@media (max-width:400px){
   .partner-ctrl-next {
     right: -39px;
   }
