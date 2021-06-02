@@ -362,6 +362,7 @@
 }
 
 .ui-state-active .ui-icon::before, .ui-button:active .ui-icon::before {
+  top: 46%;
   border: 1px solid #000;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
@@ -372,7 +373,6 @@
   border: 1px solid #fff;
   border-right: 1px solid transparent;
   border-bottom: 1px solid transparent;
-  transform: rotate(45deg);
 }
 
 .accordion__list {

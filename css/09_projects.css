@@ -89,6 +89,12 @@
   animation: show .5s;
 }
 
+@media (max-width:500px) {
+  .projects__popup {
+    width: auto;
+  }
+}
+
 .projects__popup:after {
   position: absolute;
   display: block;
