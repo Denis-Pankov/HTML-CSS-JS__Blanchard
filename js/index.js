@@ -52,6 +52,9 @@ $(document).ready(function () {
   $('.hero-section').click(function (event) {
     $('.header-top').removeClass('header-top-magnifier');
   });
+  $('.header-top__magnifier-closed').click(function (event) {
+    $('.header-top').removeClass('header-top-magnifier');
+  });
   $('.gallery__image').click(function (event) {
     $('.overlay').toggleClass('overlay-active');
   });
@@ -80,6 +83,10 @@ const choices = new Choices(element, {
 
 var mySwiper4 = new Swiper('.gallery-right__swiper', {
   preloadImages: false,
+  slidesPerView: 1,
+  slidesPerGroup: 1,
+  slidesPerColumn: 1,
+  spaceBetween: 0,
   lazy: {
     loadOnTransitionStart: false,
     loadPrevNext: true,
@@ -470,36 +477,104 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function() {
-  var lazyloadImages = document.querySelectorAll("img.lazy");    
+document.addEventListener("DOMContentLoaded", function () {
+  var lazyloadImages = document.querySelectorAll("img.lazy");
   var lazyloadThrottleTimeout;
-  
-  function lazyload () {
-    if(lazyloadThrottleTimeout) {
+
+  function lazyload() {
+    if (lazyloadThrottleTimeout) {
       clearTimeout(lazyloadThrottleTimeout);
-    }    
-    
-    lazyloadThrottleTimeout = setTimeout(function() {
-        var scrollTop = window.pageYOffset;
-        lazyloadImages.forEach(function(img) {
-            if(img.offsetTop < (window.innerHeight + scrollTop)) {
-              img.src = img.dataset.src;
-              img.classList.remove('lazy');
-            }
-        });
-        if(lazyloadImages.length == 0) { 
-          document.removeEventListener("scroll", lazyload);
-          window.removeEventListener("resize", lazyload);
-          window.removeEventListener("orientationChange", lazyload);
+    }
+
+    lazyloadThrottleTimeout = setTimeout(function () {
+      var scrollTop = window.pageYOffset;
+      lazyloadImages.forEach(function (img) {
+        if (img.offsetTop < (window.innerHeight + scrollTop)) {
+          img.src = img.dataset.src;
+          img.classList.remove('lazy');
         }
+      });
+      if (lazyloadImages.length == 0) {
+        document.removeEventListener("scroll", lazyload);
+        window.removeEventListener("resize", lazyload);
+        window.removeEventListener("orientationChange", lazyload);
+      }
     }, 20);
   }
-  
+
   document.addEventListener("scroll", lazyload);
   window.addEventListener("resize", lazyload);
   window.addEventListener("orientationChange", lazyload);
 });
 
+// Отправка формы
+"use strict"
+document.addEventListener('DOMContentLoaded', function () {
+  const form = document.getElementById('form');
+  form.addEventListener('submit', formSend);
+
+  async function formSend(e) {
+    e.preventDefault();
+
+    let error = formValidate(form);
+    
+    let formData = new FormData(form);
+
+    if (error === 0) {
+      form.classList.add('_sending');
+      let response = await fetch ('sendmail.php', {
+        method: 'POST',
+        body: formData
+      });
+      if (response.ok){
+        let result = await response.json();
+        alert(result.message);
+        form.reset();
+        form.classList.remove('._sending');
+      } else {
+        alert("Ошибка");
+        form.classList.remove('._sending');
+      }
+    } else {
+        alert('Заполните обязательные поля корректно, чтобы мы смогли дозвониться');
+    }
+
+  }
+
+  function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
+
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
+
+      if (input.classList.contains('_tel')){
+        if (telTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+    function formAddError(input) {
+      input.parentElement.classList.add('_error');
+      input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+      input.parentElement.classList.remove('_error');
+      input.classList.remove('_error');
+    }
+    function telTest(input) {
+      return !/^\d[\d\(\)\ -]{4,14}\d$/.test(input.value);
+    }
+});
 
 
 
