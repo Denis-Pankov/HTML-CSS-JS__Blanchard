@@ -11,7 +11,7 @@
   $mail->IsHTML(true);
 
   //От кого письмо
-  $mail->setForm('info@den.ru', 'Денис Панков');
+  $mail->setFrom('denispankov11@gmail.com', 'Денис Панков');
   //Кому отправить
   $mail->addAddress('angelman@mail.ru');
   //Тема письма
@@ -24,14 +24,14 @@
     $body.='<p><strong>Имя:</strong> '.$_POST['name'].'</p>';
   }
   if(trim(!empty($_POST['tel']))){
-    $body.='<p><strong>Номер телефона:</strong> '.$_POST['tel'].'</p>';
+    $body.='<p><strong>Номер:</strong> '.$_POST['tel'].'</p>';
   }
 
   $mail->Body = $body;
 
   //Отправка
   if (!$mail->send()) {
-    $message = 'Ошибка';
+    $message = 'Ошибка???';
   } else {
     $message = 'Данные отправлены!';
   }
