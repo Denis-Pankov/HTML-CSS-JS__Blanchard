@@ -526,13 +526,13 @@ document.addEventListener('DOMContentLoaded', function () {
         method: 'POST',
         body: formData
       });
-      if (response.ok){
+      if (response.ok) {
         let result = await response.json();
         alert(result.message);
         form.reset();
         form.classList.remove('_sending');
       } else {
-        alert("Ошибка!!!");
+        alert("Ошибка!!! Что-то пошло не так(");
         form.classList.remove('_sending');
       }
     } else {
