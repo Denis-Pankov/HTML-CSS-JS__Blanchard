@@ -8113,7 +8113,9 @@
             Леонтьевский переулок, дом 5, строение 1
           </p>
           <h3 class="reset-title contacts-left__subtitle contacts-left__call-heading">Заказать обратный звонок</h3>
-          <form action="#" id="form" class="contacts-left__call-form call-form">
+          <form action="sendmail.php" method="POST" enctype="multipart/form-data" id="form" class="contacts-left__call-form call-form">
+            <!-- <input type="hidden" name="admin_email[]" value="angelman@mail.ru"> -->
+            <!-- <input type="hidden" name="form_subject" value="Тема письма"> -->
             <input id="formName" name="name" class="call-form__input _req" type="text" placeholder="Имя*">
             <input id="formTel" name="tel" class="call-form__input _req _tel" type="number" placeholder="Телефон*">
             <button class="call-form__btn" type="submit">Заказать</button>
