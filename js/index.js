@@ -1,6 +1,6 @@
-document.onkeydown = function (e) {
-  if (e.keyCode == 32) e.preventDefault();
-};
+// document.onkeydown = function (e) {
+//   if (e.keyCode == 32) e.preventDefault();
+// };
 
 // Dropdown-Header
 document.addEventListener('DOMContentLoaded', function () {
@@ -48,12 +48,15 @@ $(document).ready(function () {
   });
   $('.header-top__magnifier-svg').click(function (event) {
     $('.header-top').addClass('header-top-magnifier');
+    $('.hero-container__heading').addClass('hero-container__heading-open');
   });
   $('.hero-section').click(function (event) {
     $('.header-top').removeClass('header-top-magnifier');
+    $('.hero-container__heading').removeClass('hero-container__heading-open');
   });
   $('.header-top__magnifier-closed').click(function (event) {
     $('.header-top').removeClass('header-top-magnifier');
+    $('.hero-container__heading').removeClass('hero-container__heading-open');
   });
   $('.gallery__image').click(function (event) {
     $('.overlay').toggleClass('overlay-active');
@@ -218,11 +221,15 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 });
 
-$('.accordion__item-btn').click(() => {
-  $('html, body').animate({
-    scrollTop: $('.info-content-active').offset().top
-  }, 200);
-});
+function mobileScroll() {
+  if (~['Android', 'iPhone', 'iPod', 'iPad', 'BlackBerry'].indexOf(navigator.platform)) {
+    $('.accordion__item-btn').click(() => {
+      $('html, body').animate({
+        scrollTop: $('.info-content-active').offset().top
+      }, 200);
+    });
+  }
+  }
 
 // События
 const slider = document.querySelector('.events-container');
@@ -508,65 +515,80 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 // Отправка формы
+"use strict"
+document.addEventListener('DOMContentLoaded', function () {
+	const form = document.getElementById('form');
+	form.addEventListener('submit', formSend);
 
-let selector = document.querySelectorAll('input[type="tel"]');
-let im = new Inputmask('+7 (999) 999-99-99');
-im.mask(selector);
+	async function formSend(e) {
+		e.preventDefault();
 
-let selector2 = document.querySelector('input[type="tel"]');
+		let error = formValidate(form);
 
-selector2.addEventListener('input', function(){
-	console.log(selector2.value)
+		let formData = new FormData(form);
 
+    if (error === 0) {
+			form.classList.add('_sending');
+			// let response = await fetch('sendmail.php', {
+			let response = await fetch('sendmail.php', {
+				method: 'POST',
+				body: formData
+			});
+			if (response.ok) {
+				let result = await response.json();
+				alert(result.message);
+				form.reset();
+				form.classList.remove('_sending');
+			} else {
+        alert("Ошибка!!! Что-то пошло не так(");
+        form.classList.remove('_sending');
+      }
+    } else {
+        alert('Заполните обязательные поля корректно, чтобы мы смогли дозвониться');
+    }
 
-	const re = /^\d*(\.\d+)?$/
+  }
 
-	console.log(selector2.value.match(/[0-9]/g).length)
+  function formValidate(form) {
+    let error = 0;
+    let formReq = document.querySelectorAll('._req');
 
+    for (let index = 0; index < formReq.length; index++) {
+      const input = formReq[index];
+      formRemoveError(input);
 
-	console.log(selector2.value.replace(/[0-9]/g, "0"));
-	
+      if (input.classList.contains('_tel')){
+        if (telTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else {
+        if (input.value === '') {
+          formAddError(input);
+          error++;
+        }
+      }
+    }
+    return error;
+  }
+    function formAddError(input) {
+      input.parentElement.classList.add('_error');
+      input.classList.add('_error');
+    }
+    function formRemoveError(input) {
+      input.parentElement.classList.remove('_error');
+      input.classList.remove('_error');
+    }
+    function telTest(input) {
+      return !/^\d[\d\(\)\ -]{4,14}\d$/.test(input.value);
+    }
 });
 
-// const fileInput = document.querySelector('input[type="file"]');
 
-// fileInput.addEventListener('change', (e) => {
-// 	let files = e.currentTarget.files;
-// 	console.log(files);
 
-// 	if (files.length) {
-// 		fileInput.closest('label').querySelector('span').textContent = files[0].name;
-// 	} else {
-// 		fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
-// 	}
 
-// });
 
-let validateForms = function(selector, rules, successModal, yaGoal) {
-	new window.JustValidate(selector, {
-		rules: rules,
-		submitHandler: function(form) {
-			let formData = new FormData(form);
 
-			let xhr = new XMLHttpRequest();
 
-			xhr.onreadystatechange = function() {
-				if (xhr.readyState === 4) {
-					if (xhr.status === 200) {
-						console.log('Отправлено');
-					}
-				}
-			}
 
-			xhr.open('POST', 'mail.php', true);
-			xhr.send(formData);
-
-			form.reset();
-
-			// fileInput.closest('label').querySelector('span').textContent = 'Прикрепить файл';
-		}
-	});
-}
-
-validateForms('.form', { email: {required: true, email: true}, tel: {required: true} }, '.thanks-popup', 'send goal');
 

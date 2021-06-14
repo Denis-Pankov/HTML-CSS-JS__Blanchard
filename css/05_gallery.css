@@ -150,6 +150,7 @@
 }
 
 .choices[data-type*=select-one]:after {
+  position: absolute;
   content: '';
   top: 50%;
   right: 15px;
@@ -159,11 +160,12 @@
   border-color: #fff #fff transparent transparent;
   border-width: 1px;
   transform: rotate(-45deg);
-  position: absolute;
   pointer-events: none;
+  transition: border-color 200ms;
 }
 
 .choices[data-type*=select-one].is-open:after {
+  top: 60%;
   border-color: transparent transparent #fff #fff;
 }
 

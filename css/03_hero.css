@@ -67,6 +67,10 @@
     font-size: 32px;
     line-height: 35px;
   }
+
+  .hero-container__heading-open {
+    padding-top: 97px;
+  }
 }
 
 .hero-container__item {

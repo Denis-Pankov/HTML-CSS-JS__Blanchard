@@ -213,8 +213,14 @@
 .info-content__description {
   padding-right: 20px;
   padding-left: 1px;
+  margin-bottom: 15px;
   max-width: 780px;
   line-height: 32px;
+}
+
+.info-content__link {
+  color: var(--activeD0);
+  font-weight: 600;
 }
 
 /* Accordion */

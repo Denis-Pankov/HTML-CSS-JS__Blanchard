@@ -193,7 +193,28 @@
 }
 
 .call-form__input._error {
-  box-shadow: 0 0 15px red;
+  border: 1px solid #D11616;
+}
+
+.call-form .error-message{
+  position: absolute;
+  font-size: 12px;
+  color: #D11616;
+  opacity: 0;
+}
+
+.call-form._error .error-message{
+  opacity: 1;
+}
+
+.error-message-name{
+  top: -13px;
+  left: 25px; 
+}
+
+.error-message-tel{
+  top: 50px;
+  left: 25px; 
 }
 
 .call-form__btn {
