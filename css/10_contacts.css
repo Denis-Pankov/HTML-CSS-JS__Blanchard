@@ -205,6 +205,7 @@
 
 .call-form._error .error-message{
   opacity: 1;
+  animation: show .7s;
 }
 
 .error-message-name{
