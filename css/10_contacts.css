@@ -320,6 +320,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
+	text-align: center;
   top: -10%;
   left: -5%;
   width: 110%;
