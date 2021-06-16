@@ -325,6 +325,7 @@
   left: -5%;
   width: 110%;
   height: 115%;
+	padding: 0px 7px;
   border-radius: 20px; 
   color: #fff; 
   text-shadow: var(--activeD0) 1px 0px, var(--activeD0) 1px 1px, var(--activeD0) 0px 1px, var(--activeD0) -1px 1px, var(--activeD0) -1px 0px, var(--activeD0) -1px -1px, var(--activeD0) 0px -1px, var(--activeD0) 1px -1px;
