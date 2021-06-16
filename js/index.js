@@ -67,6 +67,11 @@ $(document).ready(function () {
   $('.overlay').click(function (event) {
     $('.overlay').removeClass('overlay-active');
   });
+  $('.contacts-left__btn-ok').click(function (event) {
+    $('#form').removeClass('_message-error');
+    $('#form').removeClass('_message-nosend');
+    $('#form').removeClass('_message-ok');
+  });
 });
 
 // Hero
@@ -539,22 +544,21 @@ document.addEventListener('DOMContentLoaded', function () {
 
     if (error === 0) {
       form.classList.add('_sending');
-      // let response = await fetch('sendmail.php', {
       let response = await fetch('sendmail.php', {
         method: 'POST',
         body: formData
       });
       if (response.ok) {
         let result = await response.json();
-        alert(result.message);
+        form.classList.add('_message-ok');
         form.reset();
         form.classList.remove('_sending');
       } else {
-        alert("Ошибка!!! Что-то пошло не так(");
+        form.classList.add('_message-nosend');
         form.classList.remove('_sending');
       }
     } else {
-      alert('Заполните обязательные поля корректно, чтобы мы смогли дозвониться');
+      form.classList.add('_message-error');
     }
 
   }

@@ -8537,11 +8537,23 @@
           </p>
           <h3 class="reset-title contacts-left__subtitle contacts-left__call-heading">Заказать обратный звонок</h3>
           <form method="POST" enctype="multipart/form-data" id="form" class="contacts-left__call-form call-form">
+            <div class="contacts-left__message contacts-left__message-ok">
+              Данные отправлены!
+              <button type="button" class="contacts-left__btn-ok">Ok</button>
+            </div>
+            <div class="contacts-left__message contacts-left__message-nosend">
+              Ошибка отправки данных!
+              <button type="button" class="contacts-left__btn-ok">Ok</button>
+            </div>
+            <div class="contacts-left__message contacts-left__message-error">
+              Заполните поля корректно!
+              <button type="button" class="contacts-left__btn-ok">Ok</button>
+            </div>
             <span class="error-message error-message-name">Недопустимый формат</span>
             <input id="formName" name="name" class="call-form__input _req" type="text" placeholder="Имя*">
             <span class="error-message error-message-tel">Недопустимый формат</span>
             <input id="formTel" name="tel" class="call-form__input _req _tel" type="number" placeholder="Телефон*">
-            <button class="call-form__btn" type="submit">Заказать</button>
+            <button class="call-form__btn" type="submit">Заказать</button>            
           </form>
           <h3 class="reset-title contacts-left__subtitle contacts-left__social-heading">
             Связаться в один клик
@@ -8553,7 +8565,7 @@
             <li class="contacts-left__social-item contacts-left__icon-telegram">
               <a href="https://telegram.org/" class="contacts-left__social-link contacts-left__social-telegram" aria-label="Связаться через Телеграм" target="_blank"></a>
             </li>
-          </ul>
+          </ul>          
         </div>
         <div class="contacts-right__map" id="map1"></div>
       </div>

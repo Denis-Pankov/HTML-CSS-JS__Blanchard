@@ -3,13 +3,13 @@
 }
 
 .contacts-content {
-  display: flex;
+  display: flex;  
+  position: relative;
   justify-content: space-between;
 }
 
 @media(max-width:700px) {
   .contacts-content {
-    position: relative;
     display: block;
   }
 }
@@ -314,6 +314,87 @@
   border: 2px solid var(--focusA4);
 }
 
+.contacts-left__message {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  top: -10%;
+  left: -5%;
+  width: 110%;
+  height: 115%;
+  border-radius: 20px; 
+  color: #fff; 
+  text-shadow: var(--activeD0) 1px 0px, var(--activeD0) 1px 1px, var(--activeD0) 0px 1px, var(--activeD0) -1px 1px, var(--activeD0) -1px 0px, var(--activeD0) -1px -1px, var(--activeD0) 0px -1px, var(--activeD0) 1px -1px;
+  font-size: 25px;
+  font-weight: 600;
+  background-color: rgba(194, 192, 192, 0.9);
+  z-index: 1001;
+  opacity: 0;
+}
+
+._message-ok .contacts-left__message-ok {
+  display: flex;
+  opacity: 1;
+  animation: show .7s;
+}
+._message-nosend .contacts-left__message-nosend {
+  display: flex;
+  opacity: 1;
+  animation: show .7s;
+}
+._message-error .contacts-left__message-error {
+  display: flex;
+  opacity: 1;
+  animation: show .7s;
+}
+
+.contacts-left__btn-ok {
+  position: relative;
+  margin-top: 42px;
+  padding: 10px 25px;
+  border: none;
+  color: #fff;
+  border-radius: 20px;
+  border: 2px solid transparent;
+  font-size: 15px;
+  background-color: var(--activeD0);
+  transition: background-color 200ms;
+}
+
+.contacts-left__btn-ok:hover {
+  background-color: var(--hoverF3);
+}
+
+.contacts-left__btn-ok:active {
+  background-color: var(--focusA4);
+}
+
+.contacts-left__btn-ok::before {
+  position: absolute;
+  left: -2.6%;
+  top: -5%;
+  width: 111%;
+  height: 122%;
+  margin: -4px;
+  content: '';
+  border-radius: 23px;
+  border: 2px solid var(--hoverF3);
+  opacity: 0;
+  outline: none;
+  transition: opacity 200ms;
+}
+
+.contacts-left__btn-ok:focus:before {
+  opacity: 1;
+}
+
+.contacts-left__btn-ok:active:before {
+  opacity: 0;
+}
+
+/* MAP */
 .contacts-right__map {
   width: 67%;
   height: 700px;
