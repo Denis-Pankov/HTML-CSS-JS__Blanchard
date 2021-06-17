@@ -394,10 +394,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
 });
 
-// Проекты
+// ! Проекты
 
 var mySwiper3 = new Swiper('.projects-swiper', {
   preloadImages: true,
+	slidesPerView: 1,
+	slidesPerGroup: 1,
   navigation: {
     prevEl: '.partner-ctrl-prev',
     nextEl: '.partner-ctrl-next',
@@ -411,24 +413,24 @@ var mySwiper3 = new Swiper('.projects-swiper', {
 
   breakpoints: {
     1025: {
-      slidesPerView: 3,
+      slidesPerView: 3.001,
       slidesPerGroup: 3,
       spaceBetween: 50,
     },
     650: {
-      slidesPerView: 2,
+      slidesPerView: 2.001,
       slidesPerGroup: 2,
       spaceBetween: 32,
     },
     320: {
-      slidesPerView: 1,
+      slidesPerView: 1.001,
       slidesPerGroup: 1,
       spaceBetween: 5,
     },
   },
 });
 
-// MAP
+// ! MAP
 ymaps.ready(init);
 function init() {
   var myMap = new ymaps.Map("map1", {
@@ -448,7 +450,7 @@ function init() {
 }
 
 
-// Подгрузка изображений
+// ! Подгрузка изображений
 
 document.addEventListener("DOMContentLoaded", function () {
   var lazyloadImages;
@@ -529,7 +531,7 @@ document.addEventListener("DOMContentLoaded", function () {
   window.addEventListener("orientationChange", lazyload);
 });
 
-// Отправка формы
+// ! Отправка формы
 "use strict"
 document.addEventListener('DOMContentLoaded', function () {
   const form = document.getElementById('form');
