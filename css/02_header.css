@@ -140,7 +140,7 @@
   transition: color 200ms, outline-color 200ms;
 }
 
-.header-top__enter__svg path {
+.header-top__enter-svg path {
   transition: fill 200ms;
 }
 
@@ -158,15 +158,15 @@
   outline: none;
 }
 
-.header-top__enter__svg {
+.header-top__enter-svg {
   margin-right: 2px;
 }
 
-.header-top__enter:hover .header-top__enter__svg path {
+.header-top__enter:hover .header-top__enter-svg path {
   fill: var(--hoverF3);
 }
 
-.header-top__enter:active .header-top__enter__svg path {
+.header-top__enter:active .header-top__enter-svg path {
   fill: var(--activeD0);
 }
 
