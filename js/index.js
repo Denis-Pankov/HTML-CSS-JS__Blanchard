@@ -136,7 +136,7 @@ var mySwiper4 = new Swiper('.gallery-right__swiper', {
       slidesPerColumn: 1,
       spaceBetween: 0,
     },
-  },
+  },	
 });
 
 // Modal
@@ -313,7 +313,7 @@ function desktopSlider() {
       watchOverflow: true,
 
       breakpoints: {
-        1100: {
+        1131: {
           slidesPerView: 3,
           slidesPerGroup: 2,
           spaceBetween: 52,

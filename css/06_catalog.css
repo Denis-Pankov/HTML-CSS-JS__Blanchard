@@ -460,7 +460,7 @@
   transition: color 200ms, border-color 200ms;
 }
 
-.accordion__item-btn:focus:before {
+.focus-visible.accordion__item-btn:focus:before {
   position: absolute;
   content: '';
   top: 0;

@@ -7,7 +7,7 @@ html {
   box-sizing: inherit;
 }
 
-.js-focus-visible :focus:not(.focus-visible) {
+.js-focus-visible:focus:not(.focus-visible) {
   outline: none;
 }
 

@@ -89,11 +89,16 @@
   margin-top: auto;
 }
 
+@media (max-width: 1024px) {
+	.events-item__div {
+		padding: 0 35px;
+	}
+}
+
 .events-item__link {
   position: relative; 
   margin-right: auto; 
   color: var(--activeD0);  
-  /* text-decoration: underline; */
   border-bottom: 1px solid var(--activeD0);
   transition: padding-color 200ms, font-weight 200ms, outline-color 200ms;
 }

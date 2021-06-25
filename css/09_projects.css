@@ -847,3 +847,7 @@
   border-left: none;
   border-bottom: none;
 }
+
+.partner-ctrl-next.swiper-button-disabled, .partner-ctrl-prev.swiper-button-disabled {
+  opacity: 0.1;
+}
