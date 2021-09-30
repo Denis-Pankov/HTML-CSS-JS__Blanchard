@@ -751,161 +751,161 @@
 }
 
 .dropdown__realism-tintoretto {
-  background-image: url(../img/hero/dd_tintoretto.jpg);
+  background-image: url(../img/hero/dd_tintoretto.webp);
 }
 
 .dropdown__realism-frederick {
-  background-image: url(../img/hero/dd_frederick.jpg);
+  background-image: url(../img/hero/dd_frederick.webp);
 }
 
 .dropdown__realism-leonardo {
-  background-image: url(../img/hero/dd_leonardo.jpg);
+  background-image: url(../img/hero/dd_leonardo.webp);
 }
 
 .dropdown__realism-verrocchio {
-  background-image: url(../img/hero/dd_verrocchio.jpg);
+  background-image: url(../img/hero/dd_verrocchio.webp);
 }
 
 .dropdown__impressionism-monet {
-  background-image: url(../img/hero/dd_monet.jpg);
+  background-image: url(../img/hero/dd_monet.webp);
 }
 
 .dropdown__impressionism-sisley {
-  background-image: url(../img/hero/dd_sisley.jpg);
+  background-image: url(../img/hero/dd_sisley.webp);
 }
 
 .dropdown__impressionism-mane {
-  background-image: url(../img/hero/dd_mane.jpg);
+  background-image: url(../img/hero/dd_mane.webp);
 }
 
 .dropdown__impressionism-renuar {
-  background-image: url(../img/hero/dd_renuar.jpg);
+  background-image: url(../img/hero/dd_renuar.webp);
 }
 
 .dropdown__post-impressionism-gog {
-  background-image: url(../img/hero/dd_gog.jpg);
+  background-image: url(../img/hero/dd_gog.webp);
 }
 
 .dropdown__post-impressionism-cezanne {
-  background-image: url(../img/hero/dd_cezanne.jpg);
+  background-image: url(../img/hero/dd_cezanne.webp);
 }
 
 .dropdown__post-impressionism-gogen {
-  background-image: url(../img/hero/dd_gogen.jpg);
+  background-image: url(../img/hero/dd_gogen.webp);
 }
 
 .dropdown__post-impressionism-sulfur {
-  background-image: url(../img/hero/dd_sulfur.jpg);
+  background-image: url(../img/hero/dd_sulfur.webp);
 }
 
 .dropdown__avantgarde-candid {
-  background-image: url(../img/hero/dd_candid.jpg);
+  background-image: url(../img/hero/dd_candid.webp);
 }
 
 .dropdown__avantgarde-marinetti {
-  background-image: url(../img/hero/dd_marinetti.jpg);
+  background-image: url(../img/hero/dd_marinetti.webp);
 }
 
 .dropdown__avantgarde-malevich {
-  background-image: url(../img/hero/dd_malevich.jpg);
+  background-image: url(../img/hero/dd_malevich.webp);
 }
 
 .dropdown__avantgarde-picasso {
-  background-image: url(../img/hero/dd_picasso.jpg);
+  background-image: url(../img/hero/dd_picasso.webp);
 }
 
 .dpopdown__futurism-carra {
-  background-image: url(../img/hero/dd_carra.jpg);
+  background-image: url(../img/hero/dd_carra.webp);
 }
 
 .dpopdown__futurism-pratella {
-  background-image: url(../img/hero/dd_pratella.jpg);
+  background-image: url(../img/hero/dd_pratella.webp);
 }
 
 .dpopdown__futurism-severini {
-  background-image: url(../img/hero/dd_severini.jpg);
+  background-image: url(../img/hero/dd_severini.webp);
 }
 
 .dpopdown__futurism-balla {
-  background-image: url(../img/hero/dd_balla.jpg);
+  background-image: url(../img/hero/dd_balla.webp);
 }
 
 .dropdown__realism-tintoretto:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_tintoretto.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_tintoretto.webp);
 }
 
 .dropdown__realism-frederick:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_frederick.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_frederick.webp);
 }
 
 .dropdown__realism-leonardo:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_leonardo.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_leonardo.webp);
 }
 
 .dropdown__realism-verrocchio:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_verrocchio.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_verrocchio.webp);
 }
 
 .dropdown__impressionism-monet:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_monet.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_monet.webp);
 }
 
 .dropdown__impressionism-sisley:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_sisley.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_sisley.webp);
 }
 
 .dropdown__impressionism-mane:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_mane.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_mane.webp);
 }
 
 .dropdown__impressionism-renuar:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_renuar.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_renuar.webp);
 }
 
 .dropdown__post-impressionism-gog:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_gog.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_gog.webp);
 }
 
 .dropdown__post-impressionism-cezanne:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_cezanne.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_cezanne.webp);
 }
 
 .dropdown__post-impressionism-gogen:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_gogen.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_gogen.webp);
 }
 
 .dropdown__post-impressionism-sulfur:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_sulfur.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_sulfur.webp);
 }
 
 .dropdown__avantgarde-candid:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_candid.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_candid.webp);
 }
 
 .dropdown__avantgarde-marinetti:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_marinetti.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_marinetti.webp);
 }
 
 .dropdown__avantgarde-malevich:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_malevich.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_malevich.webp);
 }
 
 .dropdown__avantgarde-picasso:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_picasso.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_picasso.webp);
 }
 
 .dpopdown__futurism-carra:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_carra.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_carra.webp);
 }
 
 .dpopdown__futurism-pratella:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_pratella.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_pratella.webp);
 }
 
 .dpopdown__futurism-severini:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_severini.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_severini.webp);
 }
 
 .dpopdown__futurism-balla:active {
-  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_balla.jpg);
+  background-image: linear-gradient(0deg, rgba(194, 131, 243, .4), rgba(194, 131, 243, .4)), url(../img/hero/dd_balla.webp);
 }

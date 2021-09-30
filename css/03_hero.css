@@ -225,55 +225,55 @@
 }
 
 .hero__image-first {
-  background-image: url(../img/hero/1920First.jpg);
+  background-image: url(../img/hero/1920First.webp);
 }
 
 .hero__image-second {
-  background-image: url(../img/hero/1920Second.jpg);
+  background-image: url(../img/hero/1920Second.webp);
 }
 
 .hero__image-third {
-  background-image: url(../img/hero/1920Third.jpg);
+  background-image: url(../img/hero/1920Third.webp);
 }
 
 @media (max-width:1024px) {
   .hero__image-first {
-    background-image: url(../img/hero/1024First.jpg);
+    background-image: url(../img/hero/1024First.webp);
   }
   
   .hero__image-second {
-    background-image: url(../img/hero/1024Second.jpg);
+    background-image: url(../img/hero/1024Second.webp);
   }
   
   .hero__image-third {
-    background-image: url(../img/hero/1024Third.jpg);
+    background-image: url(../img/hero/1024Third.webp);
   }
 }
 
 @media (max-width:768px) {
   .hero__image-first {
-    background-image: url(../img/hero/768First.jpg);
+    background-image: url(../img/hero/768First.webp);
   }
   
   .hero__image-second {
-    background-image: url(../img/hero/768Second.jpg);
+    background-image: url(../img/hero/768Second.webp);
   }
   
   .hero__image-third {
-    background-image: url(../img/hero/768Third.jpg);
+    background-image: url(../img/hero/768Third.webp);
   }
 }
 
 @media (max-width:320px) {
   .hero__image-first {
-    background-image: url(../img/hero/320First.jpg);
+    background-image: url(../img/hero/320First.webp);
   }
   
   .hero__image-second {
-    background-image: url(../img/hero/320Second.jpg);
+    background-image: url(../img/hero/320Second.webp);
   }
   
   .hero__image-third {
-    background-image: url(../img/hero/320Third.jpg);
+    background-image: url(../img/hero/320Third.webp);
   }
 }
